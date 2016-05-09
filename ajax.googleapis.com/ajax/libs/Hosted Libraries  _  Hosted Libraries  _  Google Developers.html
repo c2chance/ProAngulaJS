@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://developers.google.com/speed/libraries/#ext-core -->
+<html lang="en" class="devsite"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/linkid.js"></script><script async="" src="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/analytics.js"></script><script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script><meta charset="utf-8"><meta name="xsrf_token" content="Xt4a9tHmNExMyuYkgAvSCFJ3k_qEI2ZOUng1tR2UbuI6MTQ2Mjc2MzkxNjQ3NzM1MA"><link rel="canonical" href="https://developers.google.com/speed/libraries/"><link rel="alternate" href="https://developers.google.com/speed/libraries/" hreflang="en"><link rel="shortcut icon" href="https://developers.google.com/_static/81818b7dc8/images/favicon.png"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="publisher" href="https://plus.google.com/+GoogleDevelopers/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"><link rel="stylesheet" href="https://developers.google.com/_static/81818b7dc8/css/devsite-google-blue.css"><link rel="apple-touch-icon" href="https://developers.google.com/_static/81818b7dc8/images/touch-icon.png"><link rel="search" type="application/opensearchdescription+xml" href="https://developers.google.com/s/opensearch.xml" data-tooltip-align="b,c" data-tooltip="Google Developers" aria-label="Google Developers" data-title="Google Developers"><script src="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/jquery.min.js"></script><meta property="og:site_name" content="Google Developers"><meta property="og:type" content="website"><meta property="og:url" content="https://developers.google.com/speed/libraries/"><meta property="og:locale" content="en"><script>
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'zh-cn';
+  </script><title>Hosted Libraries &nbsp;|&nbsp;
+      Hosted Libraries &nbsp;|&nbsp;
+      Google Developers</title><meta property="og:title" content="Hosted Libraries"><meta name="description" content="A stable, reliable, high-speed, globally available content distribution network for the most popular open-source JavaScript libraries."><meta property="og:description" content="A stable, reliable, high-speed, globally available content distribution network for the most popular open-source JavaScript libraries."></head><body class="devsite-doc-page
+               
+               
+               devsite-header-no-upper-tabs
+               devsite-header-no-lower-tabs no-touch" id="top_of_page"><div class="devsite-wrapper" style="margin-top: 0px;"><header class="devsite-top-section nocontent" style="position: fixed;"><div class="devsite-top-logo-row-wrapper-wrapper" style="position: relative;"><div class="devsite-top-logo-row-wrapper"><div class="devsite-top-logo-row devsite-full-site-width"><a class="devsite-logo gc-analytics-event" href="https://developers.google.com/" data-category="Site-Wide Custom Events" data-label="Site logo"><div class="devsite-logo-icon"></div><div class="devsite-logo-wordmark"></div></a><div class="devsite-search-wrapper devsite-history-enabled"><form class="devsite-search-form" action="https://developers.google.com/s/results/" method="GET" id="top-search"><div id="searchbox" class="devsite-searchbox"><span class="devsite-search-chip" data-tooltip-align="b,c" data-tooltip="Restrict search to Hosted Libraries" aria-label="Restrict search to Hosted Libraries">Hosted Libraries<span class="devsite-search-chip-close material-icons"></span></span><input placeholder="搜索" type="text" class="devsite-search-field devsite-search-query" name="q" value="" autocomplete="off"><div class="devsite-search-image material-icons"></div></div><input type="hidden" name="p" id="search_project" value="/speed/libraries/" data-project-name="Hosted Libraries" data-project-path="/speed/libraries/" data-query-match=""><input type="hidden" class="suggest-project" value="Hosted Libraries"><div class="devsite-popout devsite-popout-closed"><div class="devsite-suggest-results" style="display: none;"></div><div class="devsite-history-container"><div class="devsite-history-wrapper"><div class="devsite-history-side-column"><div class="devsite-history-icon material-icons"></div></div><div class="devsite-history-main-column">登录即可查看您经常访问的网页。<div class="devsite-history-footer"><a href="https://myaccount.google.com/privacy#accounthistory" class="devsite-history-preferences-link button button-white">浏览记录偏好设置</a></div></div></div></div></div></form></div><div class="devsite-user-wrapper"><a href="https://www.google.com/accounts/ServiceLogin?passive=true&continue=https%3A%2F%2Fdevelopers.google.com%2Fspeed%2Flibraries%2F&service=ahsid" class="devsite-user-signin devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Sign in button">
+    
+    登录
+  </a></div><button type="button" class="devsite-search-button button-flat material-icons"></button></div></div></div><div class="devsite-collapsible-section" style="margin-top: -136px;"><div class="devsite-header-background devsite-full-site-width"><div class="devsite-site-nav-row devsite-full-site-width" style="visibility: hidden;"><nav class="devsite-site-nav devsite-nav"><ul class="devsite-site-nav-list"><li class="devsite-breadcrumb-wrapper
+                
+                       devsite-breadcrumb-parent
+                "><a href="https://developers.google.com/products/" class="devsite-breadcrumb gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumb: parent" data-value="1">
+                产品
+              </a></li><li class="devsite-breadcrumb-wrapper
+                
+                       devsite-breadcrumb-parent
+                "><div class="devsite-breadcrumb-guillemet material-icons"></div><a href="https://developers.google.com/speed/" class="devsite-breadcrumb gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumb: parent" data-value="2">
+                Make the Web Faster
+              </a></li><li class="devsite-breadcrumb-wrapper
+                
+                       devsite-breadcrumb-project
+                "><div class="devsite-breadcrumb-guillemet material-icons"></div><a href="https://developers.google.com/speed/libraries/" class="devsite-breadcrumb gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumb: project" data-value="3">
+                Hosted Libraries
+              </a></li></ul></nav></div><div class="devsite-product-id-row devsite-full-site-width" style="visibility: hidden;"><div class="devsite-product-id-row-links-container"><a class="devsite-product-name gc-analytics-event" href="https://developers.google.com/speed/libraries/" data-category="Site-Wide Custom Events" data-label="Project name (header)">
+      Hosted Libraries
+    </a></div></div></div></div></header><script>
+  if (window.jQuery) {
+    $(document).ready(function() {
+      if (window.devsite && window.devsite.search) {
+        
+        window.devsite.search.init('zh-cn')
+      }
+    });
+  }
+</script><div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Hosted Libraries&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-24532603-1&quot;}"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Hosted Libraries&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-1&quot;}"><script>
+      var dataLayer = [{"scriptsafe": null, "projectName": "Hosted Libraries", "language": {"requested": "zh-cn", "served": "en"}, "signedIn": "False", "internalUser": "False"}];
+    </script>
+
+      
+        <div class="devsite-article-mask"></div>
+        <div class="devsite-site-mask"></div>
+        
+        <div class="devsite-main-content clearfix" style="margin-top: 232px;">
+
+        
+        
+
+        
+  
+  
+    
+    
+
+    
+  <nav class="devsite-page-nav devsite-nav" style="left: auto; max-height: 783px; position: fixed; top: 80px;"><ul class="devsite-page-nav-list"><li class="devsite-nav-item devsite-nav-item-heading"><a href="https://developers.google.com/speed/libraries/#top_of_page" class="devsite-nav-title"><span>目录</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#libraries" class="devsite-nav-title"><span>Libraries</span></a><ul class="devsite-page-nav-list"><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#angularjs" class="devsite-nav-title"><span>AngularJS</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#angular-material" class="devsite-nav-title"><span>Angular Material</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#dojo" class="devsite-nav-title"><span>Dojo</span></a></li><li class="devsite-nav-item"><a href="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/Hosted Libraries  _  Hosted Libraries  _  Google Developers.html" class="devsite-nav-title devsite-nav-active"><span>Ext Core</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#hammerjs" class="devsite-nav-title"><span>Hammer.<wbr>JS</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#jquery" class="devsite-nav-title"><span>jQuery</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#jquery-mobile" class="devsite-nav-title"><span>jQuery Mobile</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#jquery-ui" class="devsite-nav-title"><span>jQuery UI</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#mootools" class="devsite-nav-title"><span>MooTools</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#prototype" class="devsite-nav-title"><span>Prototype</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#scriptaculous" class="devsite-nav-title"><span>script.<wbr>aculo.<wbr>us</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#spf" class="devsite-nav-title"><span>SPF</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#swfobject" class="devsite-nav-title"><span>SWFObject</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#threejs" class="devsite-nav-title"><span>three.<wbr>js</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#web-font-loader" class="devsite-nav-title"><span>Web Font Loader</span></a></li></ul></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#troubleshooting" class="devsite-nav-title"><span>Troubleshooting</span></a></li></ul></nav>
+
+
+      <article class="devsite-article">
+        <div class="devsite-article-inner">
+  
+          
+  
+
+
+
+  
+  
+  <div class="devsite-expand-section-nav-container">
+  
+  
+  </div>
+  
+    <nav class="devsite-page-nav-embedded devsite-nav"><ul class="devsite-page-nav-list"><li class="devsite-nav-item devsite-nav-item-heading"><a href="https://developers.google.com/speed/libraries/#top_of_page" class="devsite-nav-title"><span>目录</span></a><button type="button" class="devsite-nav-show-all button-transparent material-icons" data-tooltip-align="b,c" data-tooltip="Expand/collapse contents" aria-label="Expand/collapse contents" data-title="Expand/collapse contents"></button></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#libraries" class="devsite-nav-title"><span>Libraries</span></a><ul class="devsite-page-nav-list"><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#angularjs" class="devsite-nav-title"><span>AngularJS</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#angular-material" class="devsite-nav-title"><span>Angular Material</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#dojo" class="devsite-nav-title"><span>Dojo</span></a></li><li class="devsite-nav-item"><a href="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/Hosted Libraries  _  Hosted Libraries  _  Google Developers.html" class="devsite-nav-title devsite-nav-item-hidden"><span>Ext Core</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#hammerjs" class="devsite-nav-title devsite-nav-item-hidden"><span>Hammer.<wbr>JS</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#jquery" class="devsite-nav-title devsite-nav-item-hidden"><span>jQuery</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#jquery-mobile" class="devsite-nav-title devsite-nav-item-hidden"><span>jQuery Mobile</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#jquery-ui" class="devsite-nav-title devsite-nav-item-hidden"><span>jQuery UI</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#mootools" class="devsite-nav-title devsite-nav-item-hidden"><span>MooTools</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#prototype" class="devsite-nav-title devsite-nav-item-hidden"><span>Prototype</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#scriptaculous" class="devsite-nav-title devsite-nav-item-hidden"><span>script.<wbr>aculo.<wbr>us</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#spf" class="devsite-nav-title devsite-nav-item-hidden"><span>SPF</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#swfobject" class="devsite-nav-title devsite-nav-item-hidden"><span>SWFObject</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#threejs" class="devsite-nav-title devsite-nav-item-hidden"><span>three.<wbr>js</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#web-font-loader" class="devsite-nav-title devsite-nav-item-hidden"><span>Web Font Loader</span></a></li></ul></li><li class="devsite-nav-item"><a href="https://developers.google.com/speed/libraries/#troubleshooting" class="devsite-nav-title devsite-nav-item-hidden"><span>Troubleshooting</span></a></li><li class="devsite-nav-title devsite-more-items"><span>.<wbr>.<wbr>.<wbr></span></li></ul></nav>
+  
+  <div class="devsite-article-body clearfix devsite-no-page-title" itemprop="articleBody">
+    
+  <p>
+    The Google Hosted Libraries is a stable, reliable, high-speed, globally
+    available content distribution network for the most popular, open-source
+    JavaScript libraries.
+  </p>
+  <p>
+    Google works directly with the key stakeholders for each library effort
+    and accepts the latest versions as they are released.
+  </p>
+
+  <h2 id="libraries">Libraries</h2>
+  <p>
+    To load a hosted library, copy and paste the HTML snippet for that
+    library (shown below) in your web page. For instance, to load
+    jQuery, embed the <code class="snippet">&lt;script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"&gt;&lt;/script&gt;</code>
+    snippet in your web page.
+  </p>
+  <p>
+    We recommend that you load libraries from the CDN via HTTPS, even if your
+    own website only uses HTTP. Nowadays, performance is fast, and caching
+    works just the same. The CDN's files are served with
+    <a href="http://www.w3.org/TR/cors/#access-control-allow-origin-response-header">CORS</a>
+    and
+    <a href="http://www.w3.org/TR/resource-timing/#cross-origin-resources">Timing-Allow</a>
+    headers and allowed to be cached for 1 year.
+  </p>
+
+  <h3 id="angularjs">AngularJS</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://angularjs.org/">angularjs.org</a>
+    </dd>
+
+    <dt>stable versions:</dt>
+    <dd class="versions">
+      1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.2.27, 1.2.26, 1.2.25, 1.2.24, 1.2.23, 1.2.22, 1.2.21, 1.2.20, 1.2.19, 1.2.18, 1.2.17, 1.2.16, 1.2.15, 1.2.14, 1.2.13, 1.2.12, 1.2.11, 1.2.10, 1.2.9, 1.2.8, 1.2.7, 1.2.6, 1.2.5, 1.2.4, 1.2.3, 1.2.2, 1.2.1, 1.2.0, 1.0.8, 1.0.7, 1.0.6, 1.0.5, 1.0.4, 1.0.3, 1.0.2, 1.0.1
+    </dd>
+
+    <dt>unstable versions:</dt>
+    <dd class="versions">
+      1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.1, 1.5.0-beta.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.0-rc.5, 1.3.0-rc.4, 1.3.0-rc.3, 1.3.0-rc.2, 1.3.0-rc.1, 1.3.0-rc.0, 1.3.0-beta.19, 1.3.0-beta.18, 1.3.0-beta.17, 1.3.0-beta.16, 1.3.0-beta.15, 1.3.0-beta.14, 1.3.0-beta.13, 1.3.0-beta.12, 1.3.0-beta.11, 1.3.0-beta.10, 1.3.0-beta.9, 1.3.0-beta.8, 1.3.0-beta.7, 1.3.0-beta.6, 1.3.0-beta.5, 1.3.0-beta.4, 1.3.0-beta.3, 1.3.0-beta.2, 1.3.0-beta.1
+    </dd>
+  </dl>
+
+
+  <h3 id="angular-material">Angular Material</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://material.angularjs.org/">material.angularjs.org</a>
+    </dd>
+
+    <dt>version 1.1 release candidates:</dt>
+    <dd class="versions">
+      1.1.0-rc4, 1.1.0-rc3, 1.1.0-rc2, 1.1.0-rc1
+    </dd>
+
+    <dt>version 1.0:</dt>
+    <dd class="versions">
+      1.0.7, 1.0.6, 1.0.5, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0
+    </dd>
+
+    <dt>early beta versions:</dt>
+    <dd class="versions">
+      0.11.4, 0.11.2, 0.11.1, 0.11.0, 0.10.1, 0.10.0, 0.9.4, 0.9.0, 0.8.3, 0.8.2, 0.8.1, 0.8.0, 0.7.1, 0.7.0, 0.6.1, 0.6
+    </dd>
+  </dl>
+
+
+  <h3 id="dojo">Dojo</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://dojotoolkit.org/">dojotoolkit.org</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      1.10.4, 1.10.3, 1.10.2, 1.10.1, 1.10.0, 1.9.7, 1.9.6, 1.9.5,
+      1.9.4, 1.9.3, 1.9.2, 1.9.1, 1.9.0, 1.8.10, 1.8.9, 1.8.8, 1.8.7, 1.8.6, 1.8.5,
+      1.8.4, 1.8.3, 1.8.2, 1.8.1, 1.8.0, 1.7.8, 1.7.7, 1.7.6, 1.7.5, 1.7.4,
+      1.7.3, 1.7.2, 1.7.1, 1.7.0, 1.6.3, 1.6.2, 1.6.1, 1.6.0, 1.5.4, 1.5.3,
+      1.5.2, 1.5.1, 1.5.0, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.1, 1.4.0, 1.3.2,
+      1.3.1, 1.3.0, 1.2.3, 1.2.0, 1.1.1
+    </dd>
+  </dl>
+
+
+  <h3 id="ext-core">Ext Core</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://www.sencha.com/products/extcore">sencha.com/products/extcore</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      3.1.0, 3.0.0
+    </dd>
+  </dl>
+
+
+  <h3 id="hammerjs">Hammer.JS</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://hammerjs.github.io/">hammerjs.github.io</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      2.0.8
+    </dd>
+  </dl>
+
+
+  <h3 id="jquery">jQuery</h3>
+  
+  <dl>
+    <dt>1.x snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>2.x snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://jquery.com/">jquery.com</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      2.2.2, 2.2.1, 2.2.0, 2.1.4, 2.1.3, 2.1.1, 2.1.0, 2.0.3, 2.0.2, 2.0.1,
+      2.0.0, 1.12.2, 1.12.1, 1.12.0, 1.11.3, 1.11.2, 1.11.1, 1.11.0, 1.10.2,
+      1.10.1, 1.10.0, 1.9.1, 1.9.0, 1.8.3, 1.8.2, 1.8.1, 1.8.0, 1.7.2, 1.7.1,
+      1.7.0, 1.6.4, 1.6.3, 1.6.2, 1.6.1, 1.6.0, 1.5.2, 1.5.1, 1.5.0, 1.4.4,
+      1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.3.2, 1.3.1, 1.3.0, 1.2.6, 1.2.3
+    </dd>
+
+    <dt>note:</dt>
+    <dd>2.1.2, 1.2.5 and 1.2.4 are not hosted due to their short and unstable lives in the wild.</dd>
+  </dl>
+
+
+  <h3 id="jquery-mobile">jQuery Mobile</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;link
+        rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"&gt;<br>
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://jquerymobile.com/">jquerymobile.com</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0
+    </dd>
+
+    <dt>note:</dt>
+    <dd>This library depends on jQuery. You must also load jQuery before loading this module.</dd>
+  </dl>
+
+
+  <h3 id="jquery-ui">jQuery UI</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;link
+        rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"&gt;<br>
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://jqueryui.com/">jqueryui.com</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      1.11.4, 1.11.3, 1.11.2, 1.11.1, 1.11.0, 1.10.4, 1.10.3, 1.10.2,
+      1.10.1, 1.10.0, 1.9.2, 1.9.1, 1.9.0, 1.8.24, 1.8.23, 1.8.22, 1.8.21,
+      1.8.20, 1.8.19, 1.8.18, 1.8.17, 1.8.16, 1.8.15, 1.8.14, 1.8.13,
+      1.8.12, 1.8.11, 1.8.10, 1.8.9, 1.8.8, 1.8.7, 1.8.6, 1.8.5, 1.8.4,
+      1.8.2, 1.8.1, 1.8.0, 1.7.3, 1.7.2, 1.7.1, 1.7.0, 1.6.0, 1.5.3, 1.5.2
+    </dd>
+
+    <dt>note:</dt>
+    <dd>This library depends on jQuery. You must also load jQuery before
+      loading this module. Version 1.8.3 is not hosted due to its short
+      life, and the alias <code>1.8.3</code> actually loads 1.8.4.
+    </dd>
+  </dl>
+
+
+  <h3 id="mootools">MooTools</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/mootools/1.6.0/mootools.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://mootools.net/">mootools.net</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      1.6.0, 1.5.2, 1.5.1, 1.5.0, 1.4.5, 1.4.4, 1.4.3,
+      1.4.2, 1.4.1, 1.4.0, 1.3.2, 1.3.1, 1.3.0, 1.2.5, 1.2.4,
+      1.2.3, 1.2.2, 1.2.1, 1.1.2, 1.1.1
+    </dd>
+  </dl>
+
+
+  <h3 id="prototype">Prototype</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://prototypejs.org/">prototypejs.org</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      1.7.3.0, 1.7.2.0, 1.7.1.0, 1.7.0.0, 1.6.1.0, 1.6.0.3, 1.6.0.2
+    </dd>
+  </dl>
+
+
+  <h3 id="scriptaculous">script.aculo.us</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://script.aculo.us/">script.aculo.us</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      1.9.0, 1.8.3, 1.8.2, 1.8.1
+    </dd>
+
+    <dt>note:</dt>
+    <dd>
+      This library depends on <code>Prototype</code>. Before loading this module, you must load Prototype.
+    </dd>
+  </dl>
+
+
+  <h3 id="spf">SPF</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/spf/2.3.2/spf.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://youtube.github.io/spfjs/">youtube.github.io/spfjs</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      2.3.2, 2.3.1, 2.3.0, 2.2.0, 2.1.2, 2.1.1, 2.1.0, 2.0.1, 2.0.0
+    </dd>
+  </dl>
+
+
+  <h3 id="swfobject">SWFObject</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://code.google.com/p/swfobject/">code.google.com/p/swfobject/</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      2.2, 2.1
+    </dd>
+  </dl>
+
+
+  <h3 id="threejs">three.js</h3>
+  
+  <dl>
+    <dt>snippet:</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/threejs/r69/three.min.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="http://threejs.org/">threejs.org</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      r67, r68, r69
+    </dd>
+  </dl>
+
+
+  <h3 id="web-font-loader">Web Font Loader</h3>
+  
+  <dl>
+    <dt>snippet&gt;</dt>
+    <dd>
+      <code class="snippet">&lt;script
+        src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"&gt;&lt;/script&gt;</code>
+    </dd>
+
+    <dt>site:</dt>
+    <dd>
+      <a href="https://github.com/typekit/webfontloader">github.com/typekit/webfontloader</a>
+    </dd>
+
+    <dt>versions:</dt>
+    <dd class="versions">
+      1.6.16, 1.5.18, 1.5.10, 1.5.6, 1.5.3, 1.5.2, 1.5.0
+    </dd>
+  </dl>
+
+
+  <h2 id="troubleshooting">Troubleshooting</h2>
+  <p>
+    Seeing an outdated version? Make sure you're not using the "automatic version" links, like
+    <code class="snippet">/jqueryui/1/...</code>, but instead use URLs referring to exact versions.
+    Due to concerns over caching and lack of compatibility between even minor versions, we have
+    deprecated and stopped updating the automatic version aliases some time ago, so they will
+    forever refer to an old version (in order to not break existing sites that still use them).
+  </p>
+  <p>If you encounter problems:</p>
+  <ul>
+    <li>
+      Look for typos. Remember that JavaScript is a case-sensitive language.
+    </li>
+    <li>
+      Use a JavaScript debugger. In Chrome, use the
+      <a href="https://developer.chrome.com/devtools">Chrome DevTools</a>. In
+      Firefox, you can use the built-in
+      <a href="https://developer.mozilla.org/en-US/docs/Tools">Firefox
+      DevTools</a>. In IE, you can use the
+      <a href="http://msdn.microsoft.com/library/ie/bg182326.aspx">F12
+      developer tools</a>.
+    </li>
+  </ul>
+
+  </div>
+  
+
+  
+        
+<div class="devsite-content-footer nocontent">
+  
+  
+  
+    <p>Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see our <a href="https://developers.google.com/site-policies">Site Policies</a>.</p>
+  
+
+  
+    
+    <p class="devsite-content-footer-date" itemprop="datePublished" content="2016-04-28T01:20:48.334240">
+      
+      上次更新日期：四月 28, 2016
+    </p>
+  
+
+</div>
+
+        </div>
+      </article>
+  
+
+        </div>
+      
+
+<footer class="devsite-footer nocontent"><nav class="devsite-full-site-width"><ul class="devsite-footer-row"><li class="devsite-footer-linkbox devsite-footer-flex"><span class="devsite-footer-linkbox-icon material-icons">people</span><h3 class="devsite-footer-linkbox-heading hide-from-toc">Community</h3><ul><li class="devsite-footer-linkbox-item"><a href="http://groups.google.com/group/Google-AJAX-Search-API" class="devsite-footer-linkbox-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Discussion Group 
+                
+              </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-flex"><span class="devsite-footer-linkbox-icon material-icons">info</span><h3 class="devsite-footer-linkbox-heading hide-from-toc">Product Info</h3><ul><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/speed/libraries/terms" class="devsite-footer-linkbox-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                
+                  Terms of Service 
+                
+              </a></li></ul></li></ul></nav></footer><footer class="devsite-site-footer nocontent"><nav class="devsite-site-footer-nav devsite-nav devsite-full-site-width"><ul class="devsite-site-footer-column-list"><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>社交沟通</h3></li><li class="devsite-site-footer-item"><a href="https://googledevelopers.blogspot.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Blog Link">博客</a></li><li class="devsite-site-footer-item"><a href="https://www.facebook.com/pages/Google-Developers/967415219957038" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Facebook Link">Facebook</a></li><li class="devsite-site-footer-item"><a href="https://plus.google.com/+GoogleDevelopers/posts" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer G+ Link">Google+</a></li><li class="devsite-site-footer-item"><a href="https://medium.com/google-developers" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Medium Link">Medium</a></li><li class="devsite-site-footer-item"><a href="https://twitter.com/googledevs" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Twitter Link">Twitter</a></li><li class="devsite-site-footer-item"><a href="https://www.youtube.com/user/GoogleDevelopers" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer YouTube Link">YouTube</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>计划</h3></li><li class="devsite-site-footer-item"><a href="https://www.womentechmakers.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Women Techmakers">Women Techmakers</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/agency/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Agency">Agency Program</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/groups/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Groups">Google Developer Groups</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/experts/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Experts">Google Developer Experts</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/startups/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Startups">Startup Launchpad</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Developer Consoles</h3></li><li class="devsite-site-footer-item"><a href="https://console.developers.google.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Console">Google Developers Console</a></li><li class="devsite-site-footer-item"><a href="https://play.google.com/apps/publish/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Play Developers Console">Google Play Console</a></li><li class="devsite-site-footer-item"><a href="https://cast.google.com/publish/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cast SDK Developer Console">Cast SDK Console</a></li><li class="devsite-site-footer-item"><a href="https://chrome.google.com/webstore/developer/dashboard" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Web Store Developer Dashboard">Chrome 网上应用店信息中心</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>浏览</h3></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/android/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android">Android</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/ios/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer iOS">iOS</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/web/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Web">网络</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/games/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Games">游戏</a></li><li class="devsite-site-footer-item"><a href="https://developers.google.com/products/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products">所有产品</a></li><li class="devsite-site-footer-item"><a href="https://www.google.com/about/careers/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer more careers">招贤纳士</a></li></ul></li></ul></nav></footer><footer class="devsite-utility-footer"><nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width"><span class="devsite-utility-footer-links"><a href="https://developers.google.com/site-terms/">条款</a>
+      &nbsp; | &nbsp;
+      
+      <a href="https://www.google.com/intl/en/privacy/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Privacy Link">隐私权</a></span><form class="devsite-utility-footer-language" id="setlang" action="https://developers.google.com/i18n/setlang/" method="post"><input type="hidden" name="xsrf_token" value="Xt4a9tHmNExMyuYkgAvSCFJ3k_qEI2ZOUng1tR2UbuI6MTQ2Mjc2MzkxNjQ3NzM1MA"><input type="hidden" name="next" value="/speed/libraries/"><select id="footer_language" name="language" style="display: none;"><option value="ar">
+            العربيّة
+          </option><option value="bg">
+            български
+          </option><option value="ca">
+            català
+          </option><option value="zh-cn" selected="selected">
+            简体中文
+          </option><option value="zh-tw">
+            繁體中文
+          </option><option value="hr">
+            Hrvatski
+          </option><option value="cs">
+            česky
+          </option><option value="da">
+            dansk
+          </option><option value="nl">
+            Nederlands
+          </option><option value="en">
+            English
+          </option><option value="fa">
+            فارسی
+          </option><option value="fi">
+            suomi
+          </option><option value="fr">
+            français
+          </option><option value="de">
+            Deutsch
+          </option><option value="el">
+            Ελληνικά
+          </option><option value="he">
+            עברית
+          </option><option value="hi">
+            Hindi
+          </option><option value="hu">
+            Magyar
+          </option><option value="id">
+            Bahasa Indonesia
+          </option><option value="it">
+            italiano
+          </option><option value="ja">
+            日本語
+          </option><option value="ko">
+            한국어
+          </option><option value="lv">
+            latviešu
+          </option><option value="lt">
+            Lietuviškai
+          </option><option value="nb">
+            norsk (bokmål)
+          </option><option value="nn">
+            norsk (nynorsk)
+          </option><option value="pl">
+            polski
+          </option><option value="pt-br">
+            Português Brasileiro
+          </option><option value="pt">
+            Português
+          </option><option value="ro">
+            Română
+          </option><option value="ru">
+            Русский
+          </option><option value="sr">
+            српски
+          </option><option value="sk">
+            slovenský
+          </option><option value="sl">
+            Slovenščina
+          </option><option value="es">
+            español
+          </option><option value="es-419">
+            Español (América Latina)
+          </option><option value="sv">
+            svenska
+          </option><option value="th">
+            ภาษาไทย
+          </option><option value="tr">
+            Türkçe
+          </option><option value="uk">
+            Українська
+          </option><option value="vi">
+            Tiếng Việt
+          </option></select><span class="kd-button kd-menubutton kd-select"><div style="display: inline-block;"><div class="label" style="float: left;">
+            简体中文
+          </div><div class="kd-disclosureindicator"></div></div></span></form></nav></footer></div><script async="" defer="" src="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/api.js"></script><script src="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/jquery_ui-bundle.js"></script><script src="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/saved_resource"></script><script src="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/script_foot_closure__zh_cn.js"></script><script src="./Hosted Libraries  _  Hosted Libraries  _  Google Developers_files/script_foot.js"></script><script>
+        (function($) {
+          devsite.devsite.Init($, 'devsite',
+              '[]', '',
+              'zh-cn', true,
+              '81818b7dc8', '',
+              true,
+              true, // Enable Copenhagen
+              {"ce556e0d44070ac33ad04f8fda535631": false, "aeabbb621a03102b5b95dbd63cd26e68": true, "098dafe57affddc137df300142652cfd": false, "00fe5bd02d47cd27e60084834f8b87c5": false, "51470233c56fc1fde50f00b73c52b216": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/speed/libraries/',
+              'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+      </script><script>
+      $('#setlang select').each(function() {
+        if (navigator.userAgent.match(/msie/i)) {
+          $(this).change(function() {
+            $('#setlang').submit();
+          });
+        } else {
+          $(this).kdSelect({'change': function() {
+            $('#setlang').submit();
+          }});
+        }
+      });
+      </script></div><ul class="kd-menulist" style="display: none; position: absolute; top: 6828px; right: auto; bottom: auto; left: 1531.5px; height: 512px; padding: 0px;"><li class="kd-menulistitem">
+            العربيّة
+          </li><li class="kd-menulistitem">
+            български
+          </li><li class="kd-menulistitem">
+            català
+          </li><li class="kd-menulistitem selected">
+            简体中文
+          </li><li class="kd-menulistitem">
+            繁體中文
+          </li><li class="kd-menulistitem">
+            Hrvatski
+          </li><li class="kd-menulistitem">
+            česky
+          </li><li class="kd-menulistitem">
+            dansk
+          </li><li class="kd-menulistitem">
+            Nederlands
+          </li><li class="kd-menulistitem">
+            English
+          </li><li class="kd-menulistitem">
+            فارسی
+          </li><li class="kd-menulistitem">
+            suomi
+          </li><li class="kd-menulistitem">
+            français
+          </li><li class="kd-menulistitem">
+            Deutsch
+          </li><li class="kd-menulistitem">
+            Ελληνικά
+          </li><li class="kd-menulistitem">
+            עברית
+          </li><li class="kd-menulistitem">
+            Hindi
+          </li><li class="kd-menulistitem">
+            Magyar
+          </li><li class="kd-menulistitem">
+            Bahasa Indonesia
+          </li><li class="kd-menulistitem">
+            italiano
+          </li><li class="kd-menulistitem">
+            日本語
+          </li><li class="kd-menulistitem">
+            한국어
+          </li><li class="kd-menulistitem">
+            latviešu
+          </li><li class="kd-menulistitem">
+            Lietuviškai
+          </li><li class="kd-menulistitem">
+            norsk (bokmål)
+          </li><li class="kd-menulistitem">
+            norsk (nynorsk)
+          </li><li class="kd-menulistitem">
+            polski
+          </li><li class="kd-menulistitem">
+            Português Brasileiro
+          </li><li class="kd-menulistitem">
+            Português
+          </li><li class="kd-menulistitem">
+            Română
+          </li><li class="kd-menulistitem">
+            Русский
+          </li><li class="kd-menulistitem">
+            српски
+          </li><li class="kd-menulistitem">
+            slovenský
+          </li><li class="kd-menulistitem">
+            Slovenščina
+          </li><li class="kd-menulistitem">
+            español
+          </li><li class="kd-menulistitem">
+            Español (América Latina)
+          </li><li class="kd-menulistitem">
+            svenska
+          </li><li class="kd-menulistitem">
+            ภาษาไทย
+          </li><li class="kd-menulistitem">
+            Türkçe
+          </li><li class="kd-menulistitem">
+            Українська
+          </li><li class="kd-menulistitem">
+            Tiếng Việt
+          </li></ul><span id="devsite-request-elapsed" data-request-elapsed="359.810113907"></span>
+</body></html>
