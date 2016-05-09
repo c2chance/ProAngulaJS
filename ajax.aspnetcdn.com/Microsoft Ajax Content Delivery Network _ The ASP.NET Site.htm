@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/getid.js"></script>
+	<!-- build date: Fri, 06 May 2016 08:06:29 GMT -->
+	<title>Microsoft Ajax Content Delivery Network | The ASP.NET Site</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="application-name" content="Microsoft ASP.NET Site">
+	<link rel="dns-prefetch" href="https://media-www-asp.azureedge.net/">
+	<link rel="dns-prefetch" href="https://static.adzerk.net/">
+	<link rel="dns-prefetch" href="https://engine.adzerk.net/">
+	<link rel="dns-prefetch" href="https://www.google-analytics.com/">
+	<link rel="dns-prefetch" href="https://www.microsoft.com/">
+	<link rel="dns-prefetch" href="https://c.microsoft.com/">
+	<link rel="dns-prefetch" href="https://cs.microsoft.com/">
+	
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@aspnet">
+<meta name="twitter:domain" content="asp.net">
+<meta name="twitter:image:src" content="//www-asp.azureedge.net/v-2016-04-19-025/images/ui/asplogo-square.png">
+<meta name="twitter:title" content="Microsoft Ajax Content Delivery Network">
+<meta name="twitter:description" content="Table of Contents ajax.microsoft.com renamed to ajax.aspnetcdn.com Visual Studio .vsdoc Support Using ASP.NET Ajax from the CDN Using jQuery from the CDN Using jQuery UI from the CDN Third-Party Fi...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Microsoft Ajax Content Delivery Network">
+<meta property="og:description" content="Table of Contents ajax.microsoft.com renamed to ajax.aspnetcdn.com Visual Studio .vsdoc Support Using ASP.NET Ajax from the CDN Using jQuery from the CDN Using jQuery UI from the CDN Third-Party Fi...">
+<meta property="og:image" content="//www-asp.azureedge.net/v-2016-04-19-025/images/ui/asplogo-square.png">
+<meta property="og:url" content="https://www.asp.net/ajax/cdn">
+<meta property="og:site_name" content="The Official Microsoft ASP.NET Site">
+<meta property="fb:admins" content="scott.hanselman">
+<meta property="fb:admins" content="jon.galloway">
+<meta property="fb:admins" content="robmcm">
+	
+	
+  <link href="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/articles-content.css" rel="stylesheet" type="text/css" media="all">
+
+	<!--[if lte IE 9]>
+      <script src='//www-asp.azureedge.net/v-2016-04-19-025/scripts-bundle/html5.js' type="text/javascript"></script>
+    <![endif]-->
+	<link href="https://www-asp.azureedge.net/v-2016-04-19-025/images/content/favicon.ico" rel="shortcut icon">
+	<link rel="alternate" type="application/rss+xml" title="Latest ASP.NET Content" href="https://www.asp.net/rss/content">
+
+	<!-- Anti-Clickjacking script -->
+	
+	<script src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/ados" async="" type="text/javascript"></script><script src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/ados.js" async="" type="text/javascript"></script><script src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/analytics.js" async=""></script><script type="text/javascript">if (self === top) { var antiClickjack = document.getElementById("antiClickjack"); antiClickjack.parentNode.removeChild(antiClickjack) } else top.location = self.location;</script>
+</head>
+<body class="">	
+	
+	<div class="allcontent ">
+		<!--Edit me from backoffice - Raw - Banner-->
+<!--<div style="background-color:#fc0;padding:10px;font-size:16px;text-align:center;"><a href="http://aspnet.uservoice.com/forums/350103-forums-asp-net-website">Help us improve the ASP.NET Forums! We want to hear your ideas</a>!</div>-->
+		<header>
+			<div class="header-content">
+				<a href="https://www.asp.net/" id="logo"><svg version="1.1" id="svg5358" x="0px" y="0px" viewBox="0 0 1033.746 220.695" enable-background="new 0 0 1033.746 220.695" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><path id="path5056" fill="#FFFFFF" d="M1033.745,99.838v-18.18h-22.576V53.395l-0.76,0.234l-21.205,6.487l-0.417,0.128v21.414h-33.469V69.73c0-5.556,1.242-9.807,3.689-12.643c2.432-2.801,5.909-4.225,10.343-4.225c3.188,0,6.49,0.752,9.812,2.232l0.832,0.371V36.32l-0.391-0.143c-3.1-1.114-7.315-1.676-12.539-1.676c-6.585,0-12.568,1.433-17.786,4.273c-5.222,2.844-9.329,6.903-12.205,12.065c-2.868,5.156-4.322,11.111-4.322,17.702v13.115H917.03v18.18h15.721v76.59h22.567v-76.59h33.469v48.672c0,20.045,9.455,30.203,28.101,30.203c3.065,0,6.289-0.359,9.583-1.063c3.352-0.722,5.634-1.443,6.978-2.213l0.298-0.176v-18.348l-0.918,0.607c-1.225,0.816-2.75,1.483-4.539,1.979c-1.796,0.505-3.296,0.758-4.457,0.758c-4.369,0-7.6-1.177-9.606-3.5c-2.027-2.344-3.057-6.443-3.057-12.177V99.838H1033.745L1033.745,99.838z M866.634,160.26c-8.191,0-14.648-2.716-19.2-8.066c-4.578-5.377-6.898-13.043-6.898-22.783c0-10.049,2.32-17.914,6.901-23.387c4.554-5.436,10.95-8.194,19.014-8.194c7.825,0,14.054,2.635,18.515,7.836c4.485,5.228,6.76,13.03,6.76,23.196c0,10.291-2.14,18.196-6.359,23.484C881.175,157.594,874.874,160.26,866.634,160.26 M867.639,79.375c-15.627,0-28.04,4.579-36.889,13.61c-8.844,9.032-13.329,21.531-13.329,37.153c0,14.838,4.378,26.773,13.012,35.468c8.634,8.698,20.384,13.104,34.92,13.104c15.148,0,27.313-4.643,36.16-13.799c8.845-9.146,13.326-21.527,13.326-36.784c0-15.07-4.205-27.094-12.503-35.731C894.035,83.756,882.358,79.375,867.639,79.375 M781.035,79.375c-10.63,0-19.422,2.719-26.14,8.08c-6.758,5.393-10.185,12.466-10.185,21.025c0,4.448,0.739,8.4,2.195,11.752c1.466,3.363,3.733,6.324,6.744,8.809c2.99,2.465,7.603,5.047,13.718,7.674c5.139,2.115,8.973,3.904,11.407,5.314c2.38,1.382,4.07,2.771,5.023,4.124c0.927,1.323,1.398,3.136,1.398,5.372c0,6.367-4.768,9.465-14.579,9.465c-3.639,0-7.79-0.76-12.338-2.258c-4.55-1.496-8.801-3.647-12.634-6.406l-0.936-0.672v21.727l0.344,0.16c3.193,1.474,7.219,2.717,11.963,3.695c4.736,0.979,9.039,1.477,12.778,1.477c11.534,0,20.823-2.732,27.601-8.125c6.821-5.43,10.279-12.67,10.279-21.525c0-6.388-1.861-11.867-5.53-16.284c-3.643-4.382-9.965-8.405-18.785-11.961c-7.026-2.82-11.527-5.161-13.384-6.958c-1.79-1.736-2.698-4.191-2.698-7.3c0-2.756,1.121-4.964,3.425-6.753c2.321-1.797,5.551-2.711,9.604-2.711c3.76,0,7.607,0.594,11.433,1.758c3.824,1.164,7.182,2.723,9.985,4.63l0.921,0.63V83.504l-0.354-0.152c-2.587-1.109-5.996-2.059-10.138-2.828C788.029,79.761,784.288,79.375,781.035,79.375 M685.878,160.26c-8.188,0-14.648-2.716-19.198-8.066c-4.58-5.377-6.896-13.041-6.896-22.783c0-10.049,2.318-17.914,6.901-23.387c4.55-5.436,10.944-8.194,19.013-8.194c7.822,0,14.051,2.635,18.514,7.836c4.484,5.228,6.76,13.03,6.76,23.196c0,10.291-2.142,18.196-6.361,23.484C700.419,157.594,694.12,160.26,685.878,160.26 M686.886,79.375c-15.632,0-28.044,4.579-36.889,13.61c-8.844,9.032-13.331,21.531-13.331,37.153c0,14.844,4.38,26.773,13.014,35.468c8.634,8.698,20.382,13.104,34.92,13.104c15.145,0,27.313-4.643,36.16-13.799c8.842-9.146,13.326-21.527,13.326-36.784c0-15.07-4.207-27.094-12.506-35.731C713.276,83.756,701.604,79.375,686.886,79.375 M602.409,98.07V81.658h-22.293v94.767h22.293v-48.477c0-8.243,1.868-15.015,5.556-20.13c3.642-5.054,8.494-7.615,14.418-7.615c2.007,0,4.261,0.332,6.702,0.986c2.416,0.651,4.166,1.357,5.199,2.102l0.936,0.679V81.496l-0.361-0.155c-2.076-0.882-5.012-1.327-8.729-1.327c-5.602,0-10.615,1.8-14.908,5.344c-3.77,3.115-6.494,7.387-8.577,12.713H602.409L602.409,98.07z M540.195,79.375c-10.226,0-19.349,2.193-27.108,6.516c-7.775,4.333-13.787,10.52-17.879,18.385c-4.072,7.848-6.14,17.014-6.14,27.235c0,8.954,2.005,17.171,5.967,24.413c3.966,7.254,9.578,12.928,16.682,16.865c7.094,3.931,15.293,5.924,24.37,5.924c10.594,0,19.639-2.118,26.892-6.295l0.292-0.168v-20.423l-0.937,0.684c-3.285,2.393-6.956,4.303-10.906,5.679c-3.939,1.375-7.532,2.07-10.681,2.07c-8.748,0-15.769-2.737-20.866-8.133c-5.109-5.403-7.699-12.99-7.699-22.537c0-9.607,2.701-17.389,8.025-23.131c5.306-5.726,12.341-8.629,20.907-8.629c7.327,0,14.468,2.48,21.223,7.381l0.934,0.679V84.371l-0.302-0.17c-2.542-1.423-6.008-2.598-10.313-3.488C548.37,79.824,544.18,79.375,540.195,79.375 M473.715,81.658h-22.293v94.767h22.293V81.658z M462.796,41.287c-3.668,0-6.868,1.249-9.497,3.725c-2.64,2.482-3.98,5.607-3.98,9.295c0,3.629,1.324,6.697,3.938,9.113c2.598,2.408,5.808,3.63,9.54,3.63c3.731,0,6.954-1.222,9.583-3.626c2.646-2.42,3.987-5.488,3.987-9.117c0-3.559-1.305-6.652-3.879-9.195C469.918,42.574,466.656,41.287,462.796,41.287 M407.177,74.667v101.757h22.75V44.189H398.44l-40.022,98.221l-38.839-98.221h-32.769v132.234h21.379V74.657h0.734l41.013,101.767h16.134l40.372-101.757H407.177L407.177,74.667z"></path><path id="path5058" fill="#F1511B" d="M104.867,104.867H0V0h104.867V104.867z"></path><path id="path5060" fill="#80CC28" d="M220.654,104.867H115.787V0h104.867V104.867z"></path><path id="path5062" fill="#00ADEF" d="M104.865,220.695H0V115.828h104.865V220.695z"></path><path id="path5064" fill="#FBBC09" d="M220.654,220.695H115.787V115.828h104.867V220.695z"></path></svg></a><a href="https://jabbr.net/#/rooms/Lobby" class="jabbr" title="JabbR"><svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 13.327 14.89" enable-background="new 0 0 13.327 14.89" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g opacity="0.9"><g><defs><rect id="SVGID_1_" width="13.327" height="14.89"></rect></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"></use></clipPath><path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M11.422,11.915c-0.098-0.154-0.207-0.312-0.327-0.474c-0.119-0.162-0.244-0.313-0.375-0.454c-0.132-0.14-0.267-0.263-0.408-0.367c-0.141-0.106-0.285-0.183-0.436-0.229v-0.028c0.342-0.099,0.652-0.234,0.932-0.408c0.278-0.172,0.517-0.379,0.713-0.617c0.197-0.239,0.35-0.508,0.457-0.805c0.107-0.298,0.162-0.623,0.162-0.974c0-1.324-0.651-2.161-1.935-2.525c0.001-0.038,0.009-0.074,0.009-0.112c0-2.344-1.59-4.319-3.747-4.917v0.679c1.785,0.575,3.081,2.246,3.091,4.216C9.224,4.851,8.871,4.817,8.472,4.817h-0.27C8.154,3.352,7.089,2.142,5.688,1.875v0.673c1.037,0.254,1.813,1.166,1.86,2.269H6.565C6.512,4.055,5.882,3.452,5.106,3.452c-0.811,0-1.468,0.657-1.468,1.468c0,0.732,0.535,1.333,1.234,1.446v8.529h2.27v-3.857h0.612c0.14,0,0.271,0.028,0.39,0.088c0.119,0.058,0.234,0.142,0.345,0.252s0.219,0.242,0.327,0.397c0.106,0.154,0.22,0.33,0.336,0.527l1.568,2.593h2.606L11.422,11.915z M9.3,8.9C9.005,9.181,8.614,9.323,8.126,9.323H7.143V6.517h1.026c1.056,0,1.582,0.441,1.582,1.322C9.75,8.26,9.601,8.614,9.3,8.9"></path><path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M0.654,4.92c0-1.979,1.301-3.661,3.092-4.238V0.003C1.59,0.602,0,2.577,0,4.92C0,7.265,1.59,9.24,3.746,9.838v-0.68C1.955,8.582,0.654,6.901,0.654,4.92"></path><path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M2.656,4.92c0-1.162,0.814-2.132,1.901-2.383V1.872C3.107,2.133,2.002,3.397,2.002,4.92S3.107,7.708,4.558,7.97V7.304C3.47,7.053,2.656,6.083,2.656,4.92"></path></g></g></svg></a><a href="http://twitter.com/aspnet" class="twitter" title="Twitter"><svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 15 12.233" enable-background="new 0 0 15 12.233" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><path fill="#FFFFFF" d="M15,1.469c-0.287,0.116-0.576,0.21-0.865,0.282c-0.287,0.072-0.59,0.137-0.906,0.194c0.316-0.201,0.59-0.446,0.82-0.735c0.231-0.288,0.418-0.604,0.563-0.951c-0.318,0.145-0.643,0.289-0.973,0.432c-0.332,0.145-0.684,0.246-1.059,0.303c-0.26-0.317-0.576-0.562-0.951-0.735C11.253,0.086,10.835,0,10.375,0C9.539,0,8.819,0.302,8.213,0.908c-0.605,0.605-0.908,1.34-0.908,2.204c0,0.173,0.029,0.404,0.087,0.691C6.095,3.746,4.906,3.43,3.826,2.853c-1.082-0.576-2.011-1.34-2.789-2.291c-0.259,0.49-0.388,1.009-0.388,1.556c0,1.153,0.446,2.004,1.34,2.55c-0.52,0-0.98-0.114-1.384-0.345v0.043c0,0.75,0.23,1.405,0.692,1.966c0.461,0.563,1.037,0.916,1.729,1.06C2.91,7.421,2.787,7.443,2.658,7.457c-0.129,0.014-0.28,0.021-0.454,0.021c-0.115,0-0.288-0.028-0.518-0.086c0.172,0.605,0.518,1.109,1.037,1.512c0.519,0.404,1.124,0.621,1.816,0.648c-1.095,0.865-2.364,1.297-3.804,1.297H0c0.663,0.433,1.398,0.771,2.204,1.017c0.807,0.246,1.643,0.367,2.508,0.367c1.411,0,2.665-0.267,3.761-0.8c1.095-0.532,2.009-1.217,2.743-2.054c0.735-0.835,1.289-1.771,1.666-2.809c0.373-1.039,0.561-2.076,0.561-3.113V3.069c0.316-0.23,0.605-0.482,0.865-0.757C14.568,2.039,14.798,1.758,15,1.469"></path></svg></a><a href="https://www.facebook.com/asp.net" class="facebook" title="Facebook"><svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 7.001 15" enable-background="new 0 0 7.001 15" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><g opacity="0.9"><g><defs><rect id="SVGID_1_" width="7.001" height="15"></rect></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"></use></clipPath><path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M6.998,2.633C6.463,2.632,5.926,2.635,5.389,2.632C5.049,2.611,4.699,2.87,4.637,3.207C4.629,3.792,4.635,4.378,4.635,4.964c0.787,0.003,1.574-0.001,2.36,0.002C6.938,5.814,6.832,6.657,6.709,7.499C6.014,7.504,5.318,7.498,4.623,7.501c-0.006,2.5,0.004,5-0.004,7.5c-1.033,0.004-2.066-0.002-3.098,0.004c-0.02-2.5,0.002-5.002-0.011-7.502C1.007,7.498,0.503,7.505,0,7.499C0.001,6.657,0,5.817,0,4.977c0.504-0.006,1.007,0.002,1.51-0.003c0.016-0.817-0.015-1.635,0.017-2.452c0.05-0.646,0.296-1.297,0.78-1.744c0.585-0.557,1.416-0.745,2.2-0.769c0.83-0.007,1.66-0.003,2.49-0.002C7.002,0.881,7.002,1.757,6.998,2.633"></path></g></g></svg></a><a href="http://blogs.msdn.com/b/webdev/" class="blog">Blog</a>
+				<script type="text/javascript">var currentUsername = '';</script><div class="nav-user logged-out"><a href="javascript:;" class="profile"><svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><path fill="#ffffff" d="M5.163,21.259h1.333c0-3.311,2.694-6.005,6.004-6.005c3.31,0,6.003,2.694,6.003,6.005h1.334c0-3.064-1.891-5.693-4.564-6.79c1.535-0.938,2.564-2.624,2.564-4.55c0-2.942-2.395-5.336-5.337-5.336c-2.943,0-5.337,2.394-5.337,5.336c0,1.926,1.03,3.611,2.564,4.55C7.054,15.565,5.163,18.194,5.163,21.259 M8.498,9.919c0-2.207,1.795-4.002,4.003-4.002c2.206,0,4.001,1.795,4.001,4.002c0,2.206-1.795,4.002-4.001,4.002C10.293,13.921,8.498,12.125,8.498,9.919"></path><circle fill="none" stroke="#ffffff" stroke-width="1.483" stroke-miterlimit="10" cx="12.5" cy="12.5" r="10.873"></circle></svg></a><div class="common-dropdown collapse"><a href="https://login.asp.net/login/signin.aspx?ReturnUrl=//www.asp.net/ajax/cdn">Sign in</a><a href="https://login.asp.net/login/createuser.aspx?ReturnUrl=//www.asp.net/ajax/cdn">Join</a></div></div>
+				<div class="language-translation"><a href="javascript:;" class="language">Language</a><div class="common-dropdown translator collapse"><div id="MicrosoftTranslatorWidget" class="Dark" style="color:white;background-color:#555555"></div></div></div>
+				<div class="search-form">
+					<input name="searchterm" class="search-input" placeholder="Search" type="text">
+					<a href="javascript:;" class="search-submit"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><path fill="#FFFFFF" d="M5.89,11.594c1.32,0,2.532-0.461,3.49-1.229l7.267,7.268c0.122,0.119,0.28,0.182,0.439,0.182s0.319-0.063,0.44-0.182c0.242-0.244,0.242-0.639,0-0.881L10.26,9.486c0.767-0.958,1.229-2.17,1.229-3.49c0-3.087-2.511-5.598-5.599-5.598c-3.087,0-5.598,2.511-5.598,5.598S2.803,11.594,5.89,11.594 M5.89,1.642c2.401,0,4.354,1.953,4.354,4.354S8.291,10.35,5.89,10.35c-2.4,0-4.354-1.953-4.354-4.354S3.489,1.642,5.89,1.642"></path></svg></a>
+				</div>
+			</div>
+		</header>
+		<nav class="clearfix nav-main"><div><a href="javascript:;" class="icon"></a><a href="https://www.asp.net/">ASP.NET</a><ul><li><a href="https://www.asp.net/">
+      Home
+    </a></li><li><a href="https://www.asp.net/get-started">
+      Get Started
+    </a></li><li class="nav-learn"><a href="javascript:;">
+			Learn
+		</a>
+		<div class="common-dropdown collapse">
+	<div class="col">
+	  <h2>Web Applications</h2>
+	  <ul>
+		<li><a href="https://www.asp.net/web-forms" data-s-object-id="learn">Web Forms</a></li>
+		<li><a href="https://www.asp.net/mvc" data-s-object-id="learn">MVC</a></li>
+		<li><a href="https://www.asp.net/web-pages" data-s-object-id="learn">Web Pages/Razor</a></li>
+		<li><a href="https://www.asp.net/mobile" data-s-object-id="learn">Mobile</a></li>
+		<li><a href="https://www.asp.net/single-page-application" data-s-object-id="learn">Single Page Apps</a></li>
+	  </ul>
+	</div>
+	<div class="col">
+	  <h2>Web Services / API's</h2>
+		<ul>
+		  <li><a href="https://www.asp.net/web-api" data-s-object-id="learn">Web API</a></li>
+		</ul>
+	</div>
+	<div class="col">
+	  <h2>Real Time</h2>
+		<ul>
+		  <li><a href="https://www.asp.net/signalr" data-s-object-id="learn">SignalR</a></li>
+		</ul>
+	</div>
+	<div class="col">
+	  <h2>Data Access</h2>
+		<ul>
+		  <li><a href="https://www.asp.net/entity-framework" data-s-object-id="learn">Entity Framework</a></li>
+		</ul>
+	</div>
+	<div class="col">
+	  <h2>More</h2>
+		<ul>
+                         <li><a href="http://blogs.msdn.com/b/webdev/archive/2015/07/20/announcing-asp-net-4-6-and-asp-net-5-beta-5-in-visual-studio-2015-release.aspx" data-s-object-id="learn">Latest Release (2013.5)</a></li>
+                         <li><a href="https://www.asp.net/aspnet" data-s-object-id="learn">Common ASP.NET Features</a></li>
+                         <li><a href="https://www.asp.net/identity" data-s-object-id="learn">Security / Identity</a></li>
+                         <li><a href="https://www.asp.net/visual-studio" data-s-object-id="learn">Tooling/IDE</a></li>
+                         <li><a href="https://www.asp.net/aspnet/overview/deployment" data-s-object-id="learn">Deployment</a></li>
+                         <li><a href="https://www.asp.net/vnext" data-s-object-id="learn">ASP.NET 5 (RC1)</a></li>
+						 </ul>
+	</div>
+  </div>
+		</li><li><a href="https://hosting.asp.net/hosting">
+      Hosting
+    </a></li><li><a href="https://www.asp.net/downloads">
+      Downloads
+    </a></li><li class="nav-community"><a href="javascript:;">
+			Community
+		</a>
+		<div class="common-dropdown collapse">
+			<div class="col">
+				<ul>
+					<li><a href="https://www.asp.net/community" data-s-object-id="community">Overview</a></li>
+					<li><a href="https://www.asp.net/community/spotlight" data-s-object-id="community">Community Spotlight</a></li>
+					<li><a href="https://www.asp.net/community/articles" data-s-object-id="community">Articles of the Day</a></li>
+					<li><a href="https://www.asp.net/whats-new" data-s-object-id="community">What's new</a></li>
+					<li><a href="https://weblogs.asp.net/" data-s-object-id="community">Community Blogs</a></li>
+					<li><a href="https://www.asp.net/community/microsoft-blogs" data-s-object-id="community">ASP.NET Team</a></li>
+					<li><a href="https://www.asp.net/community/events" data-s-object-id="community">Events</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<ul>
+					<li><a href="https://www.asp.net/community/recognition/hall-of-fame" data-s-object-id="community">Hall Of Fame</a></li>
+					<li><a href="http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=Technology&amp;f%5B0%5D.Value=ASP.NET&amp;sortBy=Date" data-s-object-id="community">MSDN Samples</a></li>
+					<li><a href="https://forums.asp.net/" data-s-object-id="community">Forums</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<ul>
+					<li><a href="https://www.asp.net/community/websites" data-s-object-id="community">Community Websites</a></li>
+					<li><a href="https://www.asp.net/community/support" data-s-object-id="community">Community Support</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<ul>
+					<li><a href="https://live.asp.net/" data-s-object-id="community">ASP.NET Community Standup</a></li>
+				</ul>
+			</div>
+		</div>
+		</li><li><a href="https://forums.asp.net/">Forums</a></li><li><a href="https://www.asp.net/contact-us">Help</a></li></ul></div></nav>
+		
+  <div class="content two-col article-content">	
+    <div class="col-left">      
+	  <h1>Microsoft Ajax Content Delivery Network</h1>
+      <div class="important">
+    <h2>Table of Contents</h2>
+    <b><a href="#ajaxmicrosoftcom_renamed_to_ajaxaspnetcdncom_18"> ajax.microsoft.com renamed to ajax.aspnetcdn.com </a></b><br>
+    <b><a href="#Visual_Studio_vsdoc_Support_19"> Visual Studio .vsdoc Support </a></b><br>
+    <b><a href="#Using_ASPNET_Ajax_from_the_CDN_20"> Using ASP.NET Ajax from the CDN </a></b><br>
+    <b><a href="#Using_jQuery_from_the_CDN_21"> Using jQuery from the CDN </a></b><br>
+    <b><a href="#Using_jQuery_UI_from_the_CDN_22"> Using jQuery UI from the CDN </a></b><br>
+    <b><a href="#Third-Party_Files_on_the_CDN_23"> Third-Party Files on the CDN </a></b><br><br>&nbsp;&nbsp;&nbsp;<a href="#jQuery_Releases_on_the_CDN_0"> jQuery Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#jQuery_Migrate_Releases_on_the_CDN_1"> jQuery Migrate Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#jQuery_UI_Releases_on_the_CDN_2"> jQuery UI Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#jQuery_Validation_Releases_on_the_CDN_3"> jQuery Validation Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#jQuery_Mobile_Releases_on_the_CDN_4"> jQuery Mobile Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#jQuery_Templates_Releases_on_the_CDN_5"> jQuery Templates Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#jQuery_Cycle_Releases_on_the_CDN_6"> jQuery Cycle Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#jQuery_DataTables_Releases_on_the_CDN_7"> jQuery DataTables Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#Modernizr_Releases_on_the_CDN_8"> Modernizr Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#Ajax_Control_Toolkit_Releases_on_the_CDN_9"> Ajax Control Toolkit Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#JSHint_Releases_on_the_CDN_10"> JSHint Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#Knockout_Releases_on_the_CDN_11"> Knockout Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#Globalize_Releases_on_the_CDN_12"> Globalize Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#Respond_Releases_on_the_CDN_13"> Respond Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#Bootstrap_Releases_on_the_CDN_14"> Bootstrap Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#BootstrapTouchCarousel_Releases_on_the_CDN_18"> Bootstrap TouchCarousel  Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#Hammerjs_Releases_on_the_CDN_19"> Hammer.js Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#ASPNET_Web_Forms_and_Ajax_Releases_on_the_CDN_15"> ASP.NET Web Forms and Ajax Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#ASPNET_MVC_Releases_on_the_CDN_16"> ASP.NET MVC Releases on the CDN </a><br>&nbsp;&nbsp;&nbsp;<a href="#ASPNET_SignalR_Releases_on_the_CDN_17"> ASP.NET SignalR Releases on the CDN </a>
+</div>
+
+<p>The Microsoft Ajax Content Delivery Network (CDN) hosts popular third
+ party JavaScript libraries such as jQuery and enables you to easily add
+ them to your Web applications. For example, you can start using jQuery 
+which is hosted on this CDN simply by adding a &lt;script&gt; tag to 
+your page that points to ajax.aspnetcdn.com.</p>
+<p>By taking advantage of the CDN, you can significantly improve the 
+performance of your Ajax applications. The contents of the CDN are 
+cached on servers located around the world. In addition, the CDN enables
+ browsers to reuse cached third party JavaScript files for web sites 
+that are located in different domains.</p>
+<p>The CDN supports SSL (HTTPS) in case you need to serve a web page using the Secure Sockets Layer.</p>
+<p>The CDN hosts the following third party script libraries which have 
+been uploaded, and are licensed to you, by the owners of those 
+libraries:</p>
+<ul><li>jQuery (www.jquery.com)</li><li>jQuery UI (www.jqueryui.com)</li><li>jQuery Mobile (www.jquerymobile.com)</li><li>jQuery Validation (www.jquery.com)</li><li>jQuery Cycle (www.malsup.com/jquery/cycle/)</li><li>jQuery DataTables (http://datatables.net/)</li><li>Ajax Control Toolkit (owned by the Outercurve Foundation – www.outercurve.org)</li></ul>
+<p>The Microsoft Ajax CDN also includes the following libraries which have been uploaded by Microsoft:</p>
+<ul><li>ASP.NET Ajax</li><li>ASP.NET MVC JavaScript Files</li><li>ASP.NET SignalR JavaScript Files</li></ul>
+<p>Microsoft does not claim ownership of any third-party libraries 
+hosted on this CDN. The copyright owners of the libraries are licensing 
+these libraries to you. Any rights that you may have to download and use
+ such libraries are granted solely by the respective copyright owners. 
+Because these are not Microsoft libraries, Microsoft provides no 
+warranties or intellectual property rights licenses (including no 
+implied patent rights) for the third party libraries hosted on this CDN.</p>
+<p>If you wish to submit your JavaScript library and your library is one
+ of the top JavaScript libraries (as listed on 
+http://trends.builtwith.com) or extensions/plugins to these libraries 
+that are (a) popular; or (b) helpful for use on ASP.NET then please 
+contact AjaxCDNSubmission@Microsoft.com.</p>
+<h2>ajax.microsoft.com renamed to ajax.aspnetcdn.com <a title="Link to this Section" href="#ajaxmicrosoftcom_renamed_to_ajaxaspnetcdncom_18" id="ajaxmicrosoftcom_renamed_to_ajaxaspnetcdncom_18"></a></h2>
+<p>The CDN used to use the microsoft.com domain name and has been 
+changed to use the aspnetcdn.com domain name. This change was made to 
+increase performance because when a browser referenced the microsoft.com
+ domain it would send any cookies from that domain across the wire with 
+each request. By renaming to a domain name other than microsoft.com 
+performance can be increased by as much to 25%. Note ajax.microsoft.com 
+will continue to function but ajax.aspnetcdn.com is recommended.</p>
+<ul><li>Old Format: http://ajax.microsoft.com/ajax/jQuery/jquery-1.8.0.js</li><li>New Format: http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js</li></ul>
+<h2> Visual Studio .vsdoc Support <a title="Link to this Section" href="#Visual_Studio_vsdoc_Support_19" id="Visual_Studio_vsdoc_Support_19"></a></h2>
+<p>To use the .vsdoc files properly with Visual Studio 2008 you need to 
+make sure that you have VS 2008 SP1 installed and the hotfix for vsdoc 
+files installed. You can get these from here:</p>
+<ul><li><a target="_blank" title="Download Visual Studio 2008 SP1" href="http://www.microsoft.com/downloads/en/details.aspx?FamilyId=FBEE1648-7106-44A7-9649-6D9F6D58056E&amp;displaylang=en">Download Visual Studio 2008 SP1</a></li><li><a target="_blank" title="Download .vsdoc hotfix for Visual Studio 2008 SP1" href="http://code.msdn.microsoft.com/KB958502/Release/ProjectReleases.aspx?ReleaseId=1736">Download .vsdoc hotfix for Visual Studio 2008 SP1</a></li></ul>
+
+<p>Visual Studio 2010 supports .vsdoc files without any additional patches.</p>
+<h2> Using ASP.NET Ajax from the CDN <a title="Link to this Section" href="#Using_ASPNET_Ajax_from_the_CDN_20" id="Using_ASPNET_Ajax_from_the_CDN_20"></a></h2>
+<p>When using ASP.NET 4, you can redirect all requests for ASP.NET 
+framework scripts to the CDN. Retrieving scripts from the CDN instead of
+ your local web server can substantially improve the performance of 
+public ASP.NET websites.</p>
+<p>Use the ScriptManager EnableCDN property to redirect all ASP.NET framework script requests to the Microsoft Ajax CDN:</p>
+<pre style="" class="prettyprint prettyprinted"><span class="tag">&lt;asp:ScriptManager</span><span class="pln">
+    </span><span class="atn">ID</span><span class="pun">=</span><span class="atv">"ScriptManager1"</span><span class="pln">
+    </span><span class="atn">EnableCdn</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln">
+    </span><span class="atn">Runat</span><span class="pun">=</span><span class="atv">"Server"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+<h2> Using jQuery from the CDN <a title="Link to this Section" href="#Using_jQuery_from_the_CDN_21" id="Using_jQuery_from_the_CDN_21"></a></h2>
+<p>You can use jQuery scripts hosted on CDN in your Web application by adding the following script element to a page:</p>
+<pre style="" class="prettyprint prettyprinted"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"</span><span class="tag">&gt;&lt;/script&gt;</span></pre>
+<p>The CDN also includes the minified version of the jQuery script, which you can get using the following element:</p>
+<pre style="" class="prettyprint prettyprinted"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span></pre>
+
+<p>To allow your page to fallback to loading jQuery from a local path on
+ your own website if the CDN happens to be unavailable, add the 
+following element immediately after the element referencing the CDN:</p>
+<pre style="" class="prettyprint prettyprinted"><span class="tag">&lt;script&gt;</span><span class="pln">
+  </span><span class="com">// Fallback to loading jQuery from a local path if the CDN is unavailable</span><span class="pln">
+  </span><span class="pun">(</span><span class="pln">window</span><span class="pun">.</span><span class="pln">jQuery </span><span class="pun">||</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">'&lt;script src="/scripts/jquery-1.9.0.min.js"&gt;&lt;\/script&gt;'</span><span class="pun">));</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></pre>
+<p>The following sample page uses the CDN version of the jQuery library 
+(with fallback to a local copy) to display the contents of a div element
+ when a button is clicked.</p>
+<pre style="" class="prettyprint prettyprinted"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">xmlns</span><span class="pun">=</span><span class="atv">"http://www.w3.org/1999/xhtml"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+    </span><span class="tag">&lt;title&gt;</span><span class="pln">jQuery from Microsoft AJAX CDN</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+    </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"btn"</span><span class="tag">&gt;</span><span class="pln">Show Message</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+ 
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"message"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="kwd">display</span><span class="pun">:</span><span class="pln">none</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">         
+        </span><span class="tag">&lt;h1&gt;</span><span class="pln">Hello from jQuery!</span><span class="tag">&lt;/h1&gt;</span><span class="pln">         
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+ 
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script&gt;</span><span class="pln">
+        </span><span class="com">// Fallback to loading jQuery from a local path if the CDN is unavailable</span><span class="pln">
+        </span><span class="pun">(</span><span class="pln">window</span><span class="pun">.</span><span class="pln">jQuery </span><span class="pun">||</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">'&lt;script src="/scripts/jquery-1.9.0.min.js"&gt;&lt;\/script&gt;'</span><span class="pun">));</span><span class="pln">
+    </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script&gt;</span><span class="pln">                
+        </span><span class="kwd">function</span><span class="pln"> domReady</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">'#btn'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="pln"> showMessage </span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+        
+        </span><span class="kwd">function</span><span class="pln"> showMessage</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">'#message'</span><span class="pun">).</span><span class="pln">fadeIn</span><span class="pun">(</span><span class="str">'slow'</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+        
+        $</span><span class="pun">(</span><span class="pln"> domReady </span><span class="pun">);</span><span class="pln">
+    </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+
+<p>You can learn more about jQuery and download a local copy of jQuery by visiting the <a href="http://jquery.com/">jQuery</a>  Web site.</p>
+<h2> Using jQuery UI from the CDN <a title="Link to this Section" href="#Using_jQuery_UI_from_the_CDN_22" id="Using_jQuery_UI_from_the_CDN_22"></a></h2>
+<p>The CDN also hosts the jQuery UI library. The jQuery UI library 
+includes a rich set of widgets and effects that you can use in your 
+ASP.NET applications. For example, the following page illustrates how 
+you can use the jQuery UI Datepicker in the context of an ASP.NET Web 
+Forms application to display a pop-up calendar:</p>
+
+<pre style="" class="prettyprint prettyprinted"><span class="pun">&lt;%</span><span class="pln">@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="TestjQueryUICDN.WebForm1" %&gt;
+</span><span class="dec">&lt;!DOCTYPE html &gt;</span><span class="pln">
+</span><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">xmlns</span><span class="pun">=</span><span class="atv">"http://www.w3.org/1999/xhtml"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;head</span><span class="pln"> </span><span class="atn">runat</span><span class="pun">=</span><span class="atv">"server"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;title&gt;</span><span class="pln">Using jQuery UI from the CDN</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+    </span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"Stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/redmond/jquery-ui.css"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+    </span><span class="tag">&lt;form</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"form1"</span><span class="pln"> </span><span class="atn">runat</span><span class="pun">=</span><span class="atv">"server"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div&gt;</span><span class="pln">    
+        </span><span class="tag">&lt;asp:TextBox</span><span class="pln"> </span><span class="atn">ID</span><span class="pun">=</span><span class="atv">"txtStartDate"</span><span class="pln"> </span><span class="atn">ClientIDMode</span><span class="pun">=</span><span class="atv">"Static"</span><span class="pln"> </span><span class="atn">runat</span><span class="pun">=</span><span class="atv">"server"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/form&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.22/jquery-ui.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script&gt;</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#txtStartDate"</span><span class="pun">).</span><span class="pln">datepicker</span><span class="pun">();</span><span class="pln">
+    </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+<p>When you move focus to the TextBox using your keyboard, a calendar is displayed:</p>
+<p><img alt="Popup calendar created with Datepicker" src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/datepicker.png"></p>
+<p>Notice that you must include three files from the CDN in the code above:</p>
+<ul><li>The jQuery library — The jQuery UI library depends on the jQuery
+ library. You must add the jQuery library to your page before you add 
+the jQuery UI library.</li><li>The jQuery UI library — The jQuery UI 
+library contains all of the jQuery UI effects and widgets such as the 
+Datepicker widget used in the page above. </li><li>A jQuery UI theme — 
+The jQuery UI supports different themes. The page above includes a link 
+to a CSS file to import the Redmond theme.</li></ul>
+<p>
+    All of the standard jQuery UI themes are hosted on the CDN.
+    <a title="jQuery UI 1.8.10 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/cdnjqueryui1910">Visit this page</a> to view thumbnails for each theme.
+</p>
+<p>To learn more about the jQuery UI library, visit the official <a target="_blank" title="jQuery UI website" href="http://jqueryui.com/">jQuery UI website</a>.</p>
+<h2> Third-Party Files on the CDN <a title="Link to this Section" href="#Third-Party_Files_on_the_CDN_23" id="Third-Party_Files_on_the_CDN_23"></a></h2>
+<p>The CDN hosts some of the most popular third party JavaScript 
+libraries. Microsoft does not claim ownership of any third-party 
+libraries hosted on this CDN. The copyright owners of the libraries are 
+licensing these libraries to you. Any rights that you may have to 
+download and use such libraries are granted solely by the respective 
+copyright owners.  Because these are not Microsoft libraries, Microsoft 
+provides no warranties or intellectual property rights licenses 
+(including no implied patent rights) for the third party libraries 
+hosted on this CDN.</p>
+<h3>jQuery Releases on the CDN <a title="Link to this Section" href="#jQuery_Releases_on_the_CDN_0" id="jQuery_Releases_on_the_CDN_0"></a></h3>
+<p>The following releases of jQuery are hosted on the CDN:</p>
+<h4>jQuery version 2.2.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.map</li></ul>
+<h4>jQuery version 2.2.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.2.min.map</li></ul>
+<h4>jQuery version 2.2.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.map</li></ul>
+<h4>jQuery version 2.2.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.map</li></ul>
+<h4>jQuery version 2.1.4</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.map</li></ul>
+<h4>jQuery version 2.1.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.map</li></ul>
+<h4>jQuery version 2.1.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.2.min.js</li></ul>
+<h4>jQuery version 2.1.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.map</li></ul>
+<h4>jQuery version 2.1.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.map</li></ul>
+<h4>jQuery version 2.0.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.map</li></ul>
+<h4>jQuery version 2.0.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.map</li></ul>
+<h4>jQuery version 2.0.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.1-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.1.min.map</li></ul>
+<h4>jQuery version 2.0.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.0-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.0.min.map</li></ul>
+<h4>jQuery version 1.12.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.3.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.3.min.map</li></ul>
+<h4>jQuery version 1.12.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.map</li></ul>
+<h4>jQuery version 1.12.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.1.min.map</li></ul>
+<h4>jQuery version 1.12.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.map</li></ul>
+<h4>jQuery version 1.11.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.map</li></ul>
+<h4>jQuery version 1.11.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.map</li></ul>
+<h4>jQuery version 1.11.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.map</li></ul>
+<h4>jQuery version 1.11.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.map</li></ul>
+<h4>jQuery version 1.10.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.map</li></ul>
+<h4>jQuery version 1.10.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.map</li></ul>
+<h4>jQuery version 1.10.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.0-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.0.min.map</li></ul>
+<h4>jQuery version 1.9.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.map</li></ul>
+<h4>jQuery version 1.9.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.map</li></ul>
+<h4>jQuery version 1.8.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3-vsdoc.js</li></ul>
+<h4>jQuery version 1.8.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2-vsdoc.js</li></ul>
+<h4>jQuery version 1.8.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1-vsdoc.js</li></ul>
+<h4>jQuery version 1.8.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0-vsdoc.js</li></ul>
+<h4>jQuery version 1.7.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js </li></ul>
+<h4>jQuery version 1.7.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1-vsdoc.js</li></ul>
+<h4>jQuery version 1.7</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7-vsdoc.js</li></ul>
+<h4>jQuery version 1.6.4</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.4.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.4.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.4-vsdoc.js</li></ul>
+<h4>jQuery version 1.6.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.3.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.3-vsdoc.js</li></ul>
+<h4>jQuery version 1.6.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2-vsdoc.js</li></ul>
+<h4>jQuery version 1.6.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1-vsdoc.js </li></ul>
+<h4>jQuery version 1.6</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6-vsdoc.js </li></ul>
+<h4>jQuery version 1.5.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2-vsdoc.js </li></ul>
+<h4>jQuery version 1.5.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1-vsdoc.js </li></ul>
+<h4>jQuery version 1.5</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5-vsdoc.js </li></ul>
+<h4>jQuery version 1.4.4</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.4.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.4.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.4-vsdoc.js</li></ul>
+<h4>jQuery version 1.4.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.3.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.3-vsdoc.js</li></ul>
+<h4>jQuery version 1.4.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.2-vsdoc.js</li></ul>
+<h4>jQuery version 1.4.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1-vsdoc.js </li></ul>
+<h4>jQuery version 1.4</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.min.js </li></ul>
+<h4>jQuery version 1.3.2 </h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.3.2.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.3.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.3.2-vsdoc.js</li><li>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.3.2.min-vsdoc.js</li></ul>
+
+<h3>jQuery Migrate Releases on the CDN <a title="Link to this Section" href="#jQuery_Migrate_Releases_on_the_CDN_1" id="jQuery_Migrate_Releases_on_the_CDN_1"></a></h3>
+<p>
+    The following releases of jQuery Migrate are hosted on the CDN:
+</p>
+<h4>jQuery Migrate version 1.2.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.2.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.2.1.min.js</li></ul>jQuery Migrate version 1.2.0<ul><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.2.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.2.0.min.js</li></ul>
+<h4>jQuery Migrate version 1.1.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.1.1.js</li><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.1.1.min.js </li></ul>
+<h4>jQuery Migrate version 1.1.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.1.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.1.0.min.js </li></ul>
+<h4>jQuery Migrate version 1.0.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.0.0.js</li><li>http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.0.0.min.js </li></ul>
+<h3>jQuery UI Releases on the CDN <a title="Link to this Section" href="#jQuery_UI_Releases_on_the_CDN_2" id="jQuery_UI_Releases_on_the_CDN_2"></a></h3>
+<p>The following releases of the jQuery UI library are hosted on this CDN.  Click each link to see the actual list of files.</p>
+<ul>
+    <li>
+        <a title="jQuery UI 1.11.4 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1114">jQuery UI 1.11.4</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.11.3 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1113">jQuery UI 1.11.3</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.11.2 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1112">jQuery UI 1.11.2</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.11.1 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1111">jQuery UI 1.11.1</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.11.0 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1110">jQuery UI 1.11.0</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.10.4 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1104">jQuery UI 1.10.4</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.10.3 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1103">jQuery UI 1.10.3</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.10.2 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1102">jQuery UI 1.10.2</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.10.1 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1101">jQuery UI 1.10.1</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.10.0 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1100">jQuery UI 1.10.0</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.9.2 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI192">jQuery UI 1.9.2</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.9.1 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI191">jQuery UI 1.9.1</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.9.0 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI190">jQuery UI 1.9.0</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.24 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1824">jQuery UI 1.8.24</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.23 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1823">jQuery UI 1.8.23</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.22 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1822">jQuery UI 1.8.22</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.21 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1821">jQuery UI 1.8.21</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.20 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1820">jQuery UI 1.8.20</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.19 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1819">jQuery UI 1.8.19</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.18 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1818">jQuery UI 1.8.18</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.17 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1817">jQuery UI 1.8.17</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.16 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1816">jQuery UI 1.8.16</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.15 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1815">jQuery UI 1.8.15</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.14 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1814">jQuery UI 1.8.14</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.13 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1813">jQuery UI 1.8.13</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.12 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1812">jQuery UI 1.8.12</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.11 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1811">jQuery UI 1.8.11</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.10 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI1910">jQuery UI 1.8.10</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.9 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI189">jQuery UI 1.8.9</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.8 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI188">jQuery UI 1.8.8</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.7 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI187">jQuery UI 1.8.7</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.6 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI186">jQuery UI 1.8.6</a>
+    </li>
+    <li>
+        <a title="jQuery UI 1.8.5" href="https://www.asp.net/ajax/cdn/jquery-ui/CDNjQueryUI185">jQuery UI 1.8.5</a>
+    </li>
+</ul>
+
+<h3>jQuery Validation Releases on the CDN <a title="Link to this Section" href="#jQuery_Validation_Releases_on_the_CDN_3" id="jQuery_Validation_Releases_on_the_CDN_3"></a></h3>
+<p>The following releases of the jQuery Validation library are hosted on
+ this CDN.  Click each link to see the actual list of files.</p>
+<ul>
+    <li>
+        <a title="jQuery Validation 1.14.0 " href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate1140">jQuery Validate 1.14.0</a>
+    </li>
+    <li>
+        <a title="jQuery Validation 1.13.1 " href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate1131">jQuery Validate 1.13.1</a>
+    </li>
+    <li>
+        <a title="jQuery Validation 1.13.0 " href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate1130">jQuery Validate 1.13.0</a>
+    </li>
+    <li>
+        <a title="jQuery Validation 1.12.0" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate1120">jQuery Validate 1.12.0</a>
+    </li>
+    <li>
+        <a title="jQuery Validation 1.11.1" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate1111">jQuery Validate 1.11.1</a>
+    </li>
+    <li>
+        <a title="jQuery Validation 1.11.0" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate111">jQuery Validate 1.11.0</a>
+    </li>
+    <li>
+        <a title="jQuery Validation 1.10.0" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate110">jQuery Validate 1.10.0</a>
+    </li>
+    <li>
+        <a title="jquery.validate version 1.9" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate19">jQuery Validate 1.9</a>
+    </li>
+    <li>
+        <a title="jquery.validate version 1.8.1" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate181">jQuery Validate 1.8.1</a>
+    </li>
+    <li>
+        <a title="jquery.validate version 1.8" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate18">jQuery Validate 1.8</a>
+    </li>
+    <li>
+        <a title="jquery.validate version 1.7" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate17">jQuery Validate 1.7</a>
+    </li>
+    <li>
+        <a title="jQuery Validate 1.6" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate16">jQuery Validate 1.6</a>
+    </li>
+    <li>
+        <a title="jQuery Validate 1.5.5" href="https://www.asp.net/ajax/cdn/jquery-validate/CDNjQueryValidate155">jQuery Validate 1.5.5</a>
+    </li>
+</ul>
+
+
+
+<h3>jQuery Mobile Releases on the CDN <a title="Link to this Section" href="#jQuery_Mobile_Releases_on_the_CDN_4" id="jQuery_Mobile_Releases_on_the_CDN_4"></a></h3>
+<p>The following releases of the jQuery Mobile library are hosted on this CDN.  Click each link to see the actual list of files. </p>
+<ul>
+    <li>
+        <a title="jQuery Mobile 1.4.5 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile145">jQuery Mobile 1.4.5</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.4.2 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile142">jQuery Mobile 1.4.2</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.4.1 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile141">jQuery Mobile 1.4.1</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.4.0 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile140">jQuery Mobile 1.4.0</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.3.2 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile132">jQuery Mobile 1.3.2</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.3.1 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile131">jQuery Mobile 1.3.1</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.3.0 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile130">jQuery Mobile 1.3.0</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.2.0 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile120">jQuery Mobile 1.2.0</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.1.2 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile112">jQuery Mobile 1.1.2</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.1.1 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile111">jQuery Mobile 1.1.1</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.1.0 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile110">jQuery Mobile 1.1.0</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.1.0 RC2 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile110rc2">jQuery Mobile 1.1.0 RC 2</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.0.1 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile101">jQuery Mobile 1.0.1</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.0 on the Microsoft Ajax CDN " href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile10">jQuery Mobile 1.0</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.0 RC2 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile10rc2">jQuery Mobile 1.0 RC 2</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.0 RC1 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile10rc1">jQuery Mobile 1.0 RC 1</a>
+    </li>
+    <li>
+        <a title="jQuery Mobile 1.0 Beta 3 on the Microsoft Ajax CDN" href="https://www.asp.net/ajax/cdn/jquery-mobile/CDNjQueryMobile10b3">jQuery Mobile 1.0 beta 3</a>
+    </li>
+</ul>
+<h3>jQuery Templates Releases on the CDN <a title="Link to this Section" href="#jQuery_Templates_Releases_on_the_CDN_5" id="jQuery_Templates_Releases_on_the_CDN_5"></a></h3>
+<p>The following releases of the jQuery Templates plugin are hosted on this CDN.  Click each link to see the actual list of files. </p>
+<ul>
+    <li>
+        <a title="jQuery Templates Beta 1" href="https://www.asp.net/ajax/cdn/jquery-templates/CDNjQueryTemplatesBeta1">jQuery Templates Beta 1</a>
+    </li>
+</ul>
+
+
+<h3>jQuery Cycle Releases on the CDN <a title="Link to this Section" href="#jQuery_Cycle_Releases_on_the_CDN_6" id="jQuery_Cycle_Releases_on_the_CDN_6"></a></h3>
+<p>The following releases of the jQuery Cycle plugin are hosted on this CDN.  Click each link to see the actual list of files. </p>
+<ul>
+    <li>
+        <a title="jQuery Cycle 2.99" href="https://www.asp.net/ajax/cdn/jquery-cycle/CDNjQueryCycle299">jQuery Cycle 2.99</a>
+    </li>
+    <li>
+        <a title="jQuery Cycle 2.94" href="https://www.asp.net/ajax/cdn/jquery-cycle/CDNjQueryCycle294">jQuery Cycle 2.94</a>
+    </li>
+    <li>
+        <a title="jQuery Cycle 2.88" href="https://www.asp.net/ajax/cdn/jquery-cycle/CDNjQueryCycle288">jQuery Cycle 2.88</a>
+    </li>
+</ul>
+
+<h3>jQuery DataTables Releases on the CDN <a title="Link to this Section" href="#jQuery_DataTables_Releases_on_the_CDN_7" id="jQuery_DataTables_Releases_on_the_CDN_7"></a></h3>
+<p>The following releases of the jQuery DataTables plugin are hosted on this CDN.  Click each link to see the actual list of files.</p>
+<ul>
+    <li>
+        <a title="jQuery DataTables 1.10.5" href="https://www.asp.net/ajax/cdn/jquery-datatables/CDNjQueryDataTables105">jQuery DataTables 1.10.5</a>
+    </li>
+    <li>
+        <a title="jQuery DataTables 1.10.4" href="https://www.asp.net/ajax/cdn/jquery-datatables/CDNjQueryDataTables104">jQuery DataTables 1.10.4</a>
+    </li>
+    <li>
+        <a title="jQuery DataTables 1.9.4" href="https://www.asp.net/ajax/cdn/jquery-datatables/CDNjQueryDataTables194">jQuery DataTables 1.9.4</a>
+    </li>
+    <li>
+        <a title="jQuery DataTables 1.9.3" href="https://www.asp.net/ajax/cdn/jquery-datatables/CDNjQueryDataTables193">jQuery DataTables 1.9.3</a>
+    </li>
+    <li>
+        <a title="jQuery DataTables 1.9.2" href="https://www.asp.net/ajax/cdn/jquery-datatables/CDNjQueryDataTables192">jQuery DataTables 1.9.2</a>
+    </li>
+    <li>
+        <a title="jQuery DataTables 1.9.1" href="https://www.asp.net/ajax/cdn/jquery-datatables/CDNjQueryDataTables191">jQuery DataTables 1.9.1</a>
+    </li>
+    <li>
+        <a title="jQuery DataTables 1.9.0" href="https://www.asp.net/ajax/cdn/jquery-datatables/CDNjQueryDataTables190">jQuery DataTables 1.9.0</a>
+    </li>
+    <li>
+        <a title="jQuery DataTables 1.8.2" href="https://www.asp.net/ajax/cdn/jquery-datatables/CDNjQueryDataTables182">jQuery DataTables 1.8.2</a>
+    </li>
+</ul>
+
+<h3>Modernizr Releases on the CDN <a title="Link to this Section" href="#Modernizr_Releases_on_the_CDN_8" id="Modernizr_Releases_on_the_CDN_8"></a></h3>
+<p>The following releases of <a target="_blank" title="Modernizr" href="http://www.modernizr.com/">Modernizr</a> are hosted on the CDN: </p>
+<ul><li>http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js</li><li>http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-1.7-development-only.js</li><li>http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2.js</li><li>http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.1.js</li><li>http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js</li><li>http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js</li></ul>
+
+<h3>Ajax Control Toolkit Releases on the CDN <a title="Link to this Section" href="#Ajax_Control_Toolkit_Releases_on_the_CDN_9" id="Ajax_Control_Toolkit_Releases_on_the_CDN_9"></a></h3>
+<p>
+    The following releases of the client portion of the Ajax Control 
+Toolkit are hosted on this CDN. Click the link to see the actual list of
+ files.
+</p><p>
+    </p><ul>
+
+        <li>
+            <a title="Ajax Control Toolkit version 1512" href="https://www.asp.net/ajax/cdn/CDNACT1512">Ajax Control Toolkit 1512</a>
+        </li>
+        <li>
+            <a title="Ajax Control Toolkit version 1511" href="https://www.asp.net/ajax/cdn/CDNACT1511">Ajax Control Toolkit 1511</a>
+        </li>
+        <li>
+            <a title="Ajax Control Toolkit version 40412" href="https://www.asp.net/ajax/cdn/CDNACT40412">Ajax Control Toolkit 40412</a>
+        </li>
+    </ul>
+
+
+    <h3>JSHint Releases on the CDN <a title="Link to this Section" href="#JSHint_Releases_on_the_CDN_10" id="JSHint_Releases_on_the_CDN_10"></a></h3>
+<p>
+    The following releases of <a target="_blank" title="JSHint" href="http://www.jshint.com/">JSHint</a> are hosted on the CDN:
+</p>
+<ul><li>http://ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js</li></ul>
+
+<h3>Knockout Releases on the CDN <a title="Link to this Section" href="#Knockout_Releases_on_the_CDN_11" id="Knockout_Releases_on_the_CDN_11"></a></h3>
+<p>
+    The following releases of <a target="_blank" title="Knockout" href="http://www.knockoutjs.com/">Knockout</a> are hosted on the CDN:
+</p>
+<ul>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.debug.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.0.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.0.debug.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.1.0.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.1.0.debug.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.debug.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.debug.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.2.0.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.2.0.debug.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.debug.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.0.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.0.debug.js</li>
+</ul>
+
+
+
+
+
+<h3>Globalize Releases on the CDN <a title="Link to this Section" href="#Globalize_Releases_on_the_CDN_12" id="Globalize_Releases_on_the_CDN_12"></a></h3><p>The following releases of <a target="_blank" title="Globalize" href="https://github.com/jquery/globalize">Globalize</a> are hosted on the CDN:</p>
+
+<h4>Globalize version 1.0.0</h4>
+<ul>
+    <li>http://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/globalize/1.0.0/node-main.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/currency.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/date.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/message.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/number.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/plural.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/globalize/1.0.0/globalize/relative-time.js</li>
+</ul>
+
+<h4>Globalize version 0.1.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js</li><li>http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.js</li><li>http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.cultures.js<ul><li>all cultures</li></ul></li><li>http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.culture.{culture-code}.js<ul><li>Replace
+ "{culture-code}" with the desired culture code, e.g. 
+globalize.culture.en-GB.js== Microsoft Files on the CDN ==These 
+libraries were uploaded by Microsoft.   </li></ul></li></ul>
+
+<h3>Respond Releases on the CDN <a title="Link to this Section" href="#Respond_Releases_on_the_CDN_13" id="Respond_Releases_on_the_CDN_13"></a></h3><p>The following releases of <a target="_blank" title="https://github.com/scottjehl/Respond" href="https://github.com/scottjehl/Respond">https://github.com/scottjehl/Respond</a> Respond are hosted on the CDN:</p>
+
+<h4>Respond version 1.4.2</h4>
+<ul>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.2/respond.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.2/respond.min.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.2/respond.matchmedia.addListener.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.2/respond.matchmedia.addListener.min.js</li>
+</ul>
+
+<h4>Respond version 1.4.1</h4>
+<ul>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.1/respond.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.1/respond.min.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.1/respond.matchmedia.addListener.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.1/respond.matchmedia.addListener.min.js</li>
+</ul>
+
+<h4>Respond version 1.4.0</h4>
+<ul>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.0/respond.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.0/respond.min.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.0/respond.matchmedia.addListener.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/respond/1.4.0/respond.matchmedia.addListener.min.js</li>
+</ul>
+
+
+<h4>Respond version 1.3.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/respond/1.3.0/respond.js</li></ul>
+
+<h4>Respond version 1.2.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/respond/1.2.0/respond.js</li></ul>
+
+<h3>Bootstrap Releases on the CDN <a title="Link to this Section" href="#Bootstrap_Releases_on_the_CDN_14" id="Bootstrap_Releases_on_the_CDN_14"></a></h3>
+<p>
+    The following releases of <a title="getbootstrap.com" href="http://getbootstrap.com/" target="_blank">getbootstrap.com</a> bootstrap are hosted on the CDN:
+</p>
+<h4>Bootstrap version 3.3.6</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.woff</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/fonts/glyphicons-halflings-regular.woff2</li></ul>
+
+<h4>Bootstrap version 3.3.5</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff2</li></ul>
+
+<h4>Bootstrap version 3.3.4</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.woff</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.4/fonts/glyphicons-halflings-regular.woff2</li></ul>
+
+<h4>Bootstrap version 3.3.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/fonts/glyphicons-halflings-regular.woff</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/fonts/glyphicons-halflings-regular.woff2</li></ul>
+<h4>Bootstrap version 3.3.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.1/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 3.3.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 3.2.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 3.1.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.1/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 3.1.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/css/bootstrap.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/css/bootstrap-theme.css.map</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.1.0/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 3.0.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.3/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 3.0.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.2/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 3.0.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.1/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 3.0.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap-theme.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap-theme.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff</li></ul>
+<h4>Bootstrap version 2.3.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/css/bootstrap-responsive.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/css/bootstrap-responsive.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/img/glyphicons-halflings.png</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/img/glyphicons-halflings-white.png</li></ul>
+<h4>Bootstrap version 2.3.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/bootstrap.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/bootstrap.min.js</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/css/bootstrap.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/css/bootstrap.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/css/bootstrap-responsive.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/css/bootstrap-responsive.min.css</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/img/glyphicons-halflings.png</li><li>http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/img/glyphicons-halflings-white.png</li></ul>
+
+<h3>Bootstrap TouchCarousel Releases on the CDN <a title="Link to this Section" href="#BootstrapTouchCarousel_Releases_on_the_CDN_18" id="#BootstrapTouchCarousel_Releases_on_the_CDN_18"></a></h3><p>The following releases of <a target="_blank" title="https://github.com/ixisio/bootstrap-touch-carousel" href="https://github.com/ixisio/bootstrap-touch-carousel">https://github.com/ixisio/bootstrap-touch-carousel</a> Bootstrap TouchCarousel releases are hosted on the CDN:</p>
+
+<h4>Bootstrap TouchCarousel version 0.8.0</h4>
+<ul>
+    <li>http://ajax.aspnetcdn.com/ajax/bootstrap-touch-carousel/0.8.0/css/bootstrap-touch-carousel.css</li>
+    <li>http://ajax.aspnetcdn.com/ajax/bootstrap-touch-carousel/0.8.0/js/bootstrap-touch-carousel.js</li>
+</ul>
+
+<h3>Hammer.js Releases on the CDN <a title="Link to this Section" href="#Hammerjs_Releases_on_the_CDN_19" id="Hammerjs_Releases_on_the_CDN_19"></a></h3><p>The following releases of <a target="_blank" title="http://hammerjs.github.io/" href="http://hammerjs.github.io/">http://hammerjs.github.io/</a> Hammer.js releases are hosted on the CDN:</p>
+
+<h4>Hammer.js version 2.0.4</h4>
+<ul>
+    <li>http://ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.min.js</li>
+    <li>http://ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.min.map</li>
+</ul>
+
+<h3>ASP.NET Web Forms and Ajax Releases on the CDN <a title="Link to this Section" href="#ASPNET_Web_Forms_and_Ajax_Releases_on_the_CDN_15" id="ASPNET_Web_Forms_and_Ajax_Releases_on_the_CDN_15"></a></h3>
+<p>The following releases of the ASP.NET Ajax Library are hosted on the CDN. Click each link to see the actual list of files. </p>
+
+<ul>
+    <li>
+        <a title="ASP.NET Web Forms and Ajax 4.5.2" href="https://www.asp.net/ajax/cdn/CDNAjax452">ASP.NET Web Forms and Ajax version 4.5.2</a>
+    </li>
+    <li>
+        <a title="ASP.NET Web Forms and Ajax 4" href="https://www.asp.net/ajax/cdn/CDNAjax4">ASP.NET Web Forms and Ajax version 4</a>
+    </li>
+    <li>
+        <a title="ASP.NET Ajax 3.5" href="https://www.asp.net/ajax/cdn/CDNAjax35">ASP.NET Ajax version 3.5</a>
+    </li>
+</ul>
+
+<h3>ASP.NET MVC Releases on the CDN <a title="Link to this Section" href="#ASPNET_MVC_Releases_on_the_CDN_16" id="ASPNET_MVC_Releases_on_the_CDN_16"></a></h3>
+<p>The following ASP.NET MVC JavaScript files are hosted on this CDN:</p>
+<h4>ASP.NET MVC 5.2.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js</li></ul>
+<h4>ASP.NET MVC 5.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/mvc/5.1/jquery.validate.unobtrusive.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/5.1/jquery.validate.unobtrusive.min.js</li></ul>
+<h4>ASP.NET MVC 5.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/mvc/5.0/jquery.validate.unobtrusive.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/5.0/jquery.validate.unobtrusive.min.js</li></ul>
+<h4>ASP.NET MVC 4.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js</li></ul>
+<h4>ASP.NET MVC 3.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.unobtrusive-ajax.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.unobtrusive-ajax.min.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.min.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/3.0/MicrosoftMvcAjax.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/3.0/MicrosoftMvcAjax.debug.js </li></ul>
+<h4>ASP.NET MVC 2.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/mvc/2.0/MicrosoftMvcAjax.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/2.0/MicrosoftMvcAjax.debug.js </li></ul>
+<h4>ASP.NET MVC 1.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/mvc/1.0/MicrosoftMvcAjax.js</li><li>http://ajax.aspnetcdn.com/ajax/mvc/1.0/MicrosoftMvcAjax.debug.js </li></ul>
+<h3>ASP.NET SignalR Releases on the CDN <a title="Link to this Section" href="#ASPNET_SignalR_Releases_on_the_CDN_17" id="ASPNET_SignalR_Releases_on_the_CDN_17"></a></h3>
+<p>The following ASP.NET SignalR JavaScript files are hosted on this CDN:</p>
+<h4>ASP.NET SignalR 2.2.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.0.js</li></ul>
+<h4>ASP.NET SignalR 2.1.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.1.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.1.0.js</li></ul>
+<h4>ASP.NET SignalR 2.0.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.3.js</li></ul>
+<h4>ASP.NET SignalR 2.0.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.2.js</li></ul>
+<h4>ASP.NET SignalR 2.0.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.1.js</li></ul>
+<h4>ASP.NET SignalR 2.0.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.0.js</li></ul>
+<h4>ASP.NET SignalR 1.1.3</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.3.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.3.js</li></ul>
+<h4>ASP.NET SignalR 1.1.2</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.2.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.2.js</li></ul>
+<h4>ASP.NET SignalR 1.1.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.1.js</li></ul>
+<h4>ASP.NET SignalR 1.1.0</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.0.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.0.js</li></ul>
+<h4>ASP.NET SignalR 1.0.1</h4>
+<ul><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.0.1.min.js</li><li>http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.0.1.js</li></ul>
+
+<p>For information about the terms of use for the CDN, see <a target="_blank" title="Microsoft Ajax CDN Terms of Use" href="https://www.asp.net/Terms-Of-Use">Microsoft Ajax CDN Terms of Use</a>.</p>
+    </div>
+    <div class="col-right">  
+       
+      
+	  <div id="FeaturedAd2" data-adzoneid="0" data-adtypeid="5" class="ad-300x250 ad " data-adwidth="300px" data-adheight="250px" style="width:300px;height:250px;"><a href="https://engine.adzerk.net/r?e=eyJhdiI6MTI2NTkwLCJhdCI6NSwiYnQiOjAsImNtIjozODQzMDYsImNoIjo0ODExLCJjayI6e30sImNyIjoxNDMyOTA3LCJkaSI6IjAxYjNlZTRiYTg3MjQ0YzU4MWUxZTZhOTY5OTRiMzk3IiwiZG0iOjEsImZjIjoxNjQ3MzgzLCJmbCI6MTI1NTIwOCwiaXAiOiI1OC42MC4xLjExIiwibnciOjIwNzIsInBjIjo1LCJlYyI6NSwicHIiOjc3NTksInJ0IjoyLCJyZiI6Imh0dHA6Ly9qcXVlcnkuY29tL2Rvd25sb2FkLyIsInN0IjoxODA5OSwidWsiOiJ1ZTEtMmVhMTk5NzdiNGYxNDAzMDhkODA1YzQ4MmMzMWM3MzMiLCJ0cyI6MTQ2Mjc2MzYxNjYyMSwiYmYiOnRydWUsInBuIjoiRmVhdHVyZWRBZDIiLCJ1ciI6Imh0dHBzOi8vYXp1cmUubWljcm9zb2Z0LmNvbS90b29scy8_d3QubWNfaWQ9V1dfQ0VfQkRfUERfT0xBX0JOUl9DbG91ZEFwcEFuaW1hdGVkIn0&amp;s=FRRkw6hZwMayPPRBAOLuhU2-hKA" rel="nofollow" target="_blank" title="Microsoft Ad"><img src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/f6e71fe43aae4dd0bbf5f291fe46424a.gif" title="Microsoft Ad" alt="Microsoft Ad" width="300" height="250" border="0"></a><img src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/i.gif" style="position:absolute;" width="0px" height="0px" border="0"></div> 
+      <div class="clear"></div>  
+    </div>
+  </div>
+  <div class="clear">
+</div>
+<div id="BottomAd" data-adzoneid="0" data-adtypeid="4" class="ad-728x90 ad " data-adwidth="728px" data-adheight="90px" style="width:728px;height:90px;"><a href="https://engine.adzerk.net/r?e=eyJhdiI6OTA4NiwiYXQiOjQsImJ0IjowLCJjbSI6NDAzMjEwLCJjaCI6NDgxMSwiY2siOnt9LCJjciI6MTMxNDE4NiwiZGkiOiI5OTZiODFlMDUyNjY0NGU2Yjk4NDQ5MjkzZmY3ODFiNSIsImRtIjoxLCJmYyI6MTY0MjkyNSwiZmwiOjE0MzQ5OTAsImlwIjoiNTguNjAuMS4xMSIsIm53IjoyMDcyLCJwYyI6MiwiZWMiOjIsInByIjo3ODQ0LCJydCI6MiwicmYiOiJodHRwOi8vanF1ZXJ5LmNvbS9kb3dubG9hZC8iLCJzdCI6MTgwOTksInVrIjoidWUxLTJlYTE5OTc3YjRmMTQwMzA4ZDgwNWM0ODJjMzFjNzMzIiwidHMiOjE0NjI3NjM2MTY2MjIsImJmIjp0cnVlLCJwbiI6IkJvdHRvbUFkIiwidXIiOiJodHRwczovL3d3dy5zdGltdWxzb2Z0LmNvbS9lbi9wcm9kdWN0cy9yZXBvcnRzLXdlYiJ9&amp;s=6_WOS9zf4LAAOeA3dTrrI3SpI_U" rel="nofollow" target="_blank" title="Stimulsoft Ad"><img src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/767bfa13f1574dfd9283700a7f74c92d.png" title="Stimulsoft Ad" alt="Stimulsoft Ad" width="728" height="90" border="0"></a><img src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/i_002.gif" style="position:absolute;" width="0px" height="0px" border="0"></div> 
+
+		<footer>
+			<div class="footer">
+<div class="clear"></div>
+<ul class="footer-menu">
+<li class="block">
+<h2>This site is managed for Microsoft by Neudesic, LLC. | © 2016 Microsoft. All rights reserved.</h2>
+</li>
+<li><a href="https://www.asp.net/privacy" data-s-object-id="footer">Privacy Statement</a><span class="separator">|</span></li>
+<li><a href="https://www.asp.net/terms-of-use" data-s-object-id="footer">Terms of Use</a><span class="separator">|</span></li>
+<li><a href="https://www.asp.net/contact-us" data-s-object-id="footer">Contact Us</a><span class="separator">|</span></li>
+<li><a href="http://www.neudesicmediagroup.com/?site=asp#contactus" data-s-object-id="footer">Advertise With Us</a><span class="separator">|</span></li>
+<li><a href="http://www.umbraco.org/" data-s-object-id="footer">CMS by Umbraco</a><span class="separator">|</span></li>
+<li><a href="http://azure.microsoft.com/">Hosted on Microsoft Azure</a></li></ul>
+<ul class="footer-menu last">
+<li class="block">
+<h2><a class="logo-microsoft" title="Microsoft" href="http://microsoft.com/" data-s-object-id="footer">
+<svg version="1.1" id="svg5358" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 220.654 220.695" enable-background="new 0 0 220.654 220.695" xml:space="preserve">
+<path id="path5058" fill="#F1511B" d="M104.867,104.867H0V0h104.867V104.867z"></path>
+<path id="path5060" fill="#80CC28" d="M220.654,104.867H115.787V0h104.867V104.867z"></path>
+<path id="path5062" fill="#00ADEF" d="M104.865,220.695H0V115.828h104.865V220.695z"></path>
+<path id="path5064" fill="#FBBC09" d="M220.654,220.695H115.787V115.828h104.867V220.695z"></path>
+</svg>
+</a></h2>
+</li>
+<li><a href="http://aspnet.uservoice.com/" data-s-object-id="footer">Feedback on ASP.NET</a><span class="separator">|</span></li>
+<li><a href="https://connect.microsoft.com/VisualStudio" data-s-object-id="footer">File Bugs</a><span class="separator">|</span></li>
+<li><a href="https://www.asp.net/support">Support Lifecycle</a></li>
+</ul>
+</div>
+		</footer>
+	</div>
+	<div class="modal modal-webpi" style="display:none;"><a href="javascript:;" class="modal-close">✖</a><div class="modal-contents"><h2>Installs powered by the Microsoft Web Platform Installer</h2><p>The
+ product(s) you are about to install leverage the Web Platform Installer
+ (WebPI) for installation. By downloading and using the Web Platform 
+Installer (WebPI), you agree to the <a href="http://go.microsoft.com/fwlink/?LinkId=251729">license terms</a> and <a href="http://go.microsoft.com/fwlink/?LinkId=251732">privacy statement</a>
+ for WebPI. This installer will contact Microsoft over the Internet to 
+retrieve product information.  WebPI uses the Microsoft Customer 
+Experience Improvement Program (CEIP), which is turned on by default, 
+see <a href="http://go.microsoft.com/fwlink/?LinkId=251732">privacy statement</a>
+ for more information.  Some of the Microsoft software obtained through 
+WebPI may use CEIP. To view which software uses CEIP, see <a href="http://go.microsoft.com/?LinkID=9816722">here</a>.</p><a href="javascript:;" class="btn-install">Accept and install</a></div></div><div class="modal-cover" style="display:none;"></div>
+	
+	
+	<script type="text/javascript">var searchDomain = "//www.asp.net"; var cdnVersionId = "2016-04-19-025";</script>
+	<script src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/jquery-1.js" type="text/javascript" defer="defer"></script>
+	
+  <script src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/article-content.js" type="text/javascript" defer="defer"></script>	
+
+	<script>
+		(function (i, s, o, g, r, a, m)
+		{
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function ()
+			{
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-61337531-1', 'auto');
+		ga('send', 'pageview');
+	</script>	
+    <script type="text/javascript" src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/broker.js" defer="defer"></script>
+	<noscript><img alt="" width="1" height="1" src="//c.microsoft.com/trans_pixel.aspx" /></noscript>
+
+
+<script src="Microsoft%20Ajax%20Content%20Delivery%20Network%20_%20The%20ASP.NET%20Site_files/ms.js" type="text/javascript"></script></body></html>
